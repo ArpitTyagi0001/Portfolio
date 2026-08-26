@@ -4,40 +4,77 @@ import photo from "./assets/photo.png";
 function App() {
   return (
     <>
-      <header>
-        <div>
-          <h1>Hi 👋, I'm Arpit Tyagi</h1>
-          <p>Java Full Stack Developer</p>
-        </div>
-        <img src={photo} alt="Arpit Tyagi" className="profile-pic" />
+      <header className="header">
+        <div className="header-logo">Portfolio</div>
+        <nav className="header-link">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skill</a>
+          <a href="#education">Education</a>
+          <a href="#project">Project</a>
+          <a href="#contact">Contact</a>
+          <a href="#resume">Resume</a>
+        </nav>
       </header>
+      <main className="main">
+        <section id="home">
+          <div className="intro">
+            <p className="greeting">Hi 👋, I'm</p>
+            <h1>Arpit Tyagi</h1>
+            <h2>Java Full Stack Developer</h2>
+            <p>
+              Building scalable backend systems and modern web applications.
+              <br />
+              Passionate about building scalable applications, writing clean and
+              efficient code, and solving real-world problems with modern
+              technologies.
+            </p>
+            <div className="contact-info">
+              <span>
+                <strong>✉</strong> arpittyagi389@gmail.com
+              </span>
 
-      <main>
-        <section>
-          <h3>Contact Details</h3>
-          <div>
-            <p>Email : arpittyagi389@gmail.com</p>
-            <p>Phone : +91 8445970389</p>
-            <p>Location : Meerut, Uttar Pradesh, India</p>
-            <p className="social-links">
+              <span>
+                <strong>☎</strong> +91 8445970389
+              </span>
+
+              <span>
+                <strong>📍</strong> Meerut, Uttar Pradesh, India
+              </span>
+            </div>
+
+            <div className="social-links">
               <a
                 href="https://www.linkedin.com/in/arpit-tyagi0001/"
                 target="_blank"
+                rel="noreferrer"
+                className="linkedin"
               >
-                LinkedIn
+                LinkedIn ↗
               </a>
 
-              <a href="https://github.com/ArpitTyagi0001" target="_blank">
-                GitHub
+              <a
+                href="https://github.com/ArpitTyagi0001"
+                target="_blank"
+                rel="noreferrer"
+                className="github"
+              >
+                GitHub ↗
               </a>
 
-              <a href="https://leetcode.com/u/ArpitTyagi123/" target="_blank">
-                LeetCode
+              <a
+                href="https://leetcode.com/u/ArpitTyagi123/"
+                target="_blank"
+                rel="noreferrer"
+                className="leetcode"
+              >
+                LeetCode ↗
               </a>
-            </p>
+            </div>
           </div>
+          <img src={photo} alt="Arpit Tyagi" className="profile-pic" />
         </section>
-        <section>
+        <section id="about">
           <h3>About</h3>
           <p>
             I'm the kind of developer who wants to know why something works, not
@@ -50,7 +87,7 @@ function App() {
           </p>
         </section>
 
-        <section>
+        <section id="education">
           <h3>Education</h3>
           <div>
             <p>Course : B.Tech in Computer Science & Engineering</p>
@@ -60,54 +97,64 @@ function App() {
           </div>
         </section>
 
-        <section>
+        <section id="skills">
           <h3>Tech Skills</h3>
-          <div>
+          <div className="frontend" >
             <h4>Frontend</h4>
-            <ul>
-              <li>Html5</li>
+            <ul >
+              <li>HTML5</li>
               <li>CSS</li>
               <li>JavaScript</li>
               <li>React.js</li>
             </ul>
+            </div>
+            <div className="backend">
             <h4>Backend</h4>
             <ul>
               <li>Java</li>
-              <li>SpringBoot</li>
+              <li>Spring Boot</li>
               <li>MicroServices</li>
               <li>Spring Security</li>
-              <li>Spring Ai</li>
-              <li>Jpa/hibernate , Jdbc</li>
+              <li>Spring AI</li>
+              <li>JPA / Hibernate</li>
               <li>Redis</li>
               <li>Kafka</li>
             </ul>
+            </div>
+            <div className="devops">
             <h4>Devops/Tools</h4>
             <ul>
               <li>Docker</li>
               <li>Git & GitHub</li>
               <li>CI/CD (basic)</li>
-              <li>PostMan</li>
-              <li>Intellij Idea</li>
-              <li>Eclips</li>
-              <li>Vs Code</li>
+              <li>Postman</li>
+              <li>IntelliJ IDEA</li>
+              <li>Eclipse</li>
+              <li>VS Code</li>
             </ul>
+            </div>
+            <div>
             <h4>Coding languages :</h4>
             <ul>
               <li>Java</li>
               <li>Java Scipt</li>
               <li>Python</li>
             </ul>
+            </div>
+            <div>
             <h4>Cloud Computing</h4>
             <p>
-              AWS Cloud (EC2 , IAM , Cloud Watch , S3 , Iac , Cloud migration)
+              AWS Cloud (EC2 , IAM , CloudWatch , S3 , IaC, Cloud migration)
             </p>
+            </div>
+            <div>
             <h4>AI</h4>
             <ul>
-              <li>Promt Engineering</li>
+              <li>Prompt Engineering</li>
               <li>Basic Understanding of LLM Models</li>
               <li>Basic Understanding of RAG</li>
             </ul>
-          </div>
+            </div>
         </section>
         <section>
           <h3>Soft Skill</h3>
@@ -118,7 +165,7 @@ function App() {
             decisions
           </p>
         </section>
-        <section>
+        <section id="resume">
           <h3>Resume</h3>
           <a
             href="https://drive.google.com/file/d/1MY0lbLKFHBJHDKX5iJdyZV_Ib3zrsED8/view?usp=sharing"
@@ -128,10 +175,19 @@ function App() {
             Download Resume
           </a>
         </section>
-        <section>
+        <section id="project">
           <h3>Projects</h3>
           <div className="project">
-            <h4>PulseStreamAI</h4>
+            <h4>
+              PulseStreamAI{" "}
+              <a
+                href="https://github.com/ArpitTyagi0001/pulsestream-ai"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
+            </h4>
             <p>
               AI-Powered Real-Time Event Monitoring System built with Spring
               Boot, Apache Kafka, Redis, Spring AI, Spring Security (JWT),
@@ -163,16 +219,18 @@ function App() {
                 Redis) with Docker Compose for single-command deployment.
               </li>
             </ul>
-            <a
-              href="https://github.com/ArpitTyagi0001/pulsestream-ai"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
           </div>
           <div>
-            <h4>Hospital Management System</h4>
+            <h4>
+              Hospital Management System{" "}
+              <a
+                href="https://github.com/ArpitTyagi0001/hospital-management-system-backend"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
+            </h4>
             <p>
               Secure backend system built with Spring Boot, Spring Security
               (JWT), JPA/Hibernate, PostgreSQL, REST APIs, and Maven.
@@ -195,14 +253,6 @@ function App() {
                 JPA/Hibernate lazy loading.
               </li>
             </ul>
-
-            <a
-              href="https://github.com/ArpitTyagi0001/hospital-management-system-backend"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
           </div>
         </section>
         <section>
@@ -221,10 +271,40 @@ function App() {
             </li>
           </ul>
         </section>
+        <section id="contact">
+          <h3>Contact Me</h3>
+          <p>Have an opportunity or just want to say hi? Fill this out.</p>
+          <form
+            action="https://formspree.io/f/xkjwlwkb"
+            method="POST"
+            encType="multipart/form-data"
+          >
+            <div>
+              <label htmlFor="name">Name : </label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <br></br>
+            <div>
+              <label htmlFor="email">Email : </label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <br></br>
+            <div>
+              <label htmlFor="msg">Message : </label>
+              <textarea id="msg" name="msg" required />
+            </div>
+            <br></br>
+            <div>
+              <label htmlFor="attachment">Attachment (optional) :</label>
+              <input type="file" id="attachment" name="attachment" />
+            </div>
+            <button type="submit">Send</button>
+          </form>
+        </section>
       </main>
-      <footer>
-        <p>Let's build something together 🚀</p>
-        <p>
+      <footer className="footer">
+        <p className="footer-title">Let's build something together 🚀</p>
+        <p className="footer-link">
           <a href="mailto:arpittyagi389@gmail.com">Email Me</a>
 
           <a
@@ -243,7 +323,7 @@ function App() {
             GitHub
           </a>
         </p>
-        <p className="copyright">
+        <p className="footer-copyright">
           © {new Date().getFullYear()} Arpit Tyagi. All rights reserved.
         </p>
       </footer>

@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: black;
+  margin: 0;
+}
+
+.header {
+  height: 65px;
+  padding: 0px 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  font-size: 35px;
+  color: rgb(221, 230, 237);
+}
+
+.header-link {
+  display: flex;
+  gap: 30px;
+}
+
+.header-link a {
+  font-size: 20px;
+  color: rgb(221, 230, 237);
+  text-decoration: none;
+}
+
+.header-link a:hover {
+  color: #89dcf8;
+}
+
+.main {
+  width: 100%;
+}
+
+.main section {
+  padding: 80px 60px;
+  color: rgb(244, 246, 248);
+}
+
+#home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 60px;
+  padding: 80px 60px;
+}
+
+.intro {
+  max-width: 700px;
+}
+
+.intro .greeting {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+.intro h1 {
+  margin-left: 150px;
+  margin-bottom: 30px;
+  font-size: 80px;
+}
+
+.intro h2 {
+  margin-top: 20px;
+  font-size: 40px;
+}
+
+.intro p {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.contact-info {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.social-links {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.social-links a {
+  text-decoration: none;
+  background-color: rgb(131, 48, 48);
+  color: white;
+}
+
+.social-links a:hover {
+  background-color: blue;
+}
+
+.profile-pic {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+}
+
+#about {
+  min-height: 50vh;
+}
+
+#about h3 {
+  margin-top: 0px;
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+#about p {
+  margin-top: 40px;
+  margin-bottom: 0px;
+  font-size: 30px;
+}
+
+#education {
+  min-height: 60vh;
+}
+
+#education h3 {
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
+#education p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.footer {
+  padding: 20px 20px 20px;
+  text-align: center;
+  color: rgb(221, 230, 237);
+  border-top: 1px solid rgb(34, 34, 35);
+}
+
+.footer-title {
+  margin: 0 0 25px;
+  font-size: 25px;
+  font-weight: 700;
+  color: white;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  margin-bottom: 35px;
+}
+
+.footer-link a {
+  background-color: rgb(5, 5, 5);
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.footer-link a:hover {
+  color: #d73953;
+}
+
+.footer-links a:visited {
+  color: white;
+}
+
+.footer-copyright {
+  margin: 0;
+  font-size: 15px;
+  padding-top: 20px;
+  color: white;
+  border-top: 2px solid #252b33;
+}
