@@ -11,6 +11,14 @@ import {
   FaMapMarkerAlt,
   FaGraduationCap,
   FaSchool,
+  FaJava,
+  FaReact,
+  FaDatabase,
+  FaTools,
+  FaCloud,
+  FaCode,
+  FaBriefcase,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 
@@ -250,22 +258,38 @@ function App() {
                 </div>
                 Meerut Institute of Engineering and Technology
               </p>
+              <p className="education-about">
+                Built a strong foundation in programming, databases,
+                object-oriented programming, software engineering and web
+                development
+              </p>
             </div>
           </div>
         </section>
 
         <section id="skills">
-          <h3>Tech Skills</h3>
+          <h5>TECHNOLOGIES I WORK WITH</h5>
+          <h3>Tech Stack</h3>
           <div className="skill">
             <div className="lang">
-              <h4>Coding languages</h4>
+              <span className="sign">
+                <FaJava />
+              </span>
+              <h4>Backend</h4>
               <ul>
                 <li>Java</li>
-                <li>Java Scipt</li>
-                <li>Python</li>
+                <li>Spring Boot</li>
+                <li>MicroServices</li>
+                <li>Spring Security</li>
+                <li>Spring AI</li>
+                <li>JPA & Hibernate</li>
+                <li>Apache Kafka</li>
               </ul>
             </div>
             <div className="lang">
+              <span className="sign">
+                <FaReact />
+              </span>
               <h4>Frontend</h4>
               <ul>
                 <li>HTML5</li>
@@ -275,20 +299,22 @@ function App() {
               </ul>
             </div>
             <div className="lang">
-              <h4>Backend</h4>
+              <span className="sign">
+                <FaDatabase />
+              </span>
+              <h4>DataBase</h4>
               <ul>
-                <li>Java</li>
-                <li>Spring Boot</li>
-                <li>MicroServices</li>
-                <li>Spring Security</li>
-                <li>Spring AI</li>
-                <li>JPA / Hibernate</li>
+                <li>MySql</li>
+                <li>PostgreSql</li>
+                <li>Mongo DB</li>
                 <li>Redis</li>
-                <li>Kafka</li>
               </ul>
             </div>
             <div className="lang">
-              <h4>Devops/Tools</h4>
+              <span className="sign">
+                <FaTools />
+              </span>
+              <h4>Devops & Tools</h4>
               <ul>
                 <li>Docker</li>
                 <li>Git & GitHub</li>
@@ -300,170 +326,220 @@ function App() {
               </ul>
             </div>
             <div className="lang">
+              <span className="sign">
+                <FaCloud />
+              </span>
               <h4>Cloud & AI</h4>
               <ul>
-                <li>
-                  AWS Cloud (EC2 , IAM , CloudWatch , S3 , IaC, Cloud migration)
-                </li>
+                <li>AWS Cloud</li>
                 <li>Prompt Engineering</li>
-                <li>Basic Understanding of LLM Models</li>
-                <li>Basic Understanding of RAG</li>
+                <li>LLM Models</li>
+                <li>RAG Basics</li>
               </ul>
             </div>
           </div>
         </section>
-        <section className="soft">
-          <h3>Soft Skill</h3>
-          <div className="soft-skill">
-            <p> • Strong DSA problem-solving mindset (450+ LeetCode)</p>
-            <p>
-              • Comfortable owning a feature end-to-end (backend + frontend)
-            </p>
-            <p>
-              • Clear technical communication — documents APIs and system design
-              decisions
-            </p>
-          </div>
-        </section>
         <section id="project">
-          <h3>Projects</h3>
+          <h5>SELECTED WORK</h5>
+          <h3>Engineering Projects</h3>
           <div className="project">
-            <h4>PulseStreamAI</h4>
-            <p>
-              AI-Powered Real-Time Event Monitoring System built with Spring
-              Boot, Apache Kafka, Redis, Spring AI, Spring Security (JWT),
-              Microservices, PostgreSQL, React.js, and Docker.
-            </p>
-            <ul>
-              <li>
-                Event-driven microservices system using Apache Kafka, processing
-                1000+ real-time events per second with sub-second latency.
-              </li>
-              <li>
-                Redis + PostgreSQL query service cutting query latency by 70%
-                through distributed caching with TTL-based invalidation.
-              </li>
-              <li>
-                JWT-based authentication service with a Spring Cloud API Gateway
-                enforcing centralized security across microservices.
-              </li>
-              <li>
-                AI service built with Spring AI to auto-summarize platform
-                activity and generate live insights.
-              </li>
-              <li>
-                Responsive React.js dashboard with real-time data polling and
-                event analytics visualization.
-              </li>
-              <li>
-                Fully containerized (6 microservices + Kafka + PostgreSQL +
-                Redis) with Docker Compose for single-command deployment.
-              </li>
-            </ul>
-            <a
-              href="https://github.com/ArpitTyagi0001/pulsestream-ai"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
-            <h4>Hospital Management System</h4>
-            <p>
-              Secure backend system built with Spring Boot, Spring Security
-              (JWT), JPA/Hibernate, PostgreSQL, REST APIs, and Maven.
-            </p>
-            <ul>
-              <li>
-                Modeled around five core entities — Patient, Doctor, Insurance,
-                Appointment, and Department.
-              </li>
-              <li>
-                JWT-based authentication with 20+ RESTful API endpoints and full
-                CRUD operations across all entities.
-              </li>
-              <li>
-                DTO pattern with ModelMapper to keep the API layer clean and
-                secure.
-              </li>
-              <li>
-                Optimized PostgreSQL performance through query indexing and
-                JPA/Hibernate lazy loading.
-              </li>
-            </ul>
-            <a
-              href="https://github.com/ArpitTyagi0001/hospital-management-system-backend"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub
-            </a>
+            <div className="project-card">
+              <div className="p-logo">
+                <span className="p-logo-1">
+                  <FaCode />
+                </span>
+                <h4>PulseStreamAI</h4>
+              </div>
+              <p>
+                Real-time platform for tracking and analyzing location events as
+                they happen, with live dashboard statistics and fast data
+                access. Generates AI-powered summaries to provide clear insights
+                into current activity.
+              </p>
+              <ul>
+                <li>Java</li>
+                <li>Spring-Boot</li>
+                <li>React</li>
+                <li>Redis</li>
+                <li>Kafka</li>
+                <li>Spring AI</li>
+                <li>Spring Security</li>
+                <li>postgresql</li>
+              </ul>
+              <div className="g-logo">
+                <a
+                  href="https://github.com/ArpitTyagi0001/pulsestream-ai"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaGithub />
+                  GitHub
+                </a>
+              </div>
+            </div>
+            <div className="project-card">
+              <div className="p-logo">
+                <span className="p-logo-1">
+                  <FaCode />
+                </span>
+                <h4>Hospital Management System</h4>
+              </div>
+              <p>
+                System for managing patients, doctors, appointments, insurance,
+                and departments. Provides secure authentication and role-based
+                access while simplifying everyday hospital operations.
+              </p>
+              <ul>
+                <li>Java</li>
+                <li>Spring-Boot</li>
+                <li>React</li>
+                <li>Spring Security</li>
+                <li>postgresql</li>
+              </ul>
+              <div className="g-logo">
+                <a
+                  href="https://github.com/ArpitTyagi0001/hospital-management-system-backend"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaGithub />
+                  GitHub
+                </a>
+              </div>
+            </div>
+            <div className="project-card">
+              <div className="p-logo">
+                <span className="p-logo-1">
+                  <FaCode />
+                </span>
+                <h4>Employee Management System</h4>
+              </div>
+              <p>
+                System for managing employee profiles, departments, roles, and
+                company records. Supports efficient employee data management
+                through centralized creation, updating, viewing, and removal of
+                records.
+              </p>
+              <ul>
+                <li>Java</li>
+                <li>Spring-Boot</li>
+                <li>Spring Security</li>
+                <li>postgresql</li>
+              </ul>
+              <div className="g-logo">
+                <a
+                  href="https://github.com/ArpitTyagi0001/Employee-Mangement"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaGithub />
+                  GitHub
+                </a>
+              </div>
+            </div>
           </div>
         </section>
-        <section className="cert">
-          <h3>Certifications & Achievements</h3>
-          <ul>
-            <li>
-              NPTEL Elite — Programming in Java (IIT Kharagpur) Certificate ID:
-              NPTEL25CS57S1152000387
-            </li>
-            <li>
-              450+ problems solved on LeetCode (Arrays, Strings, Trees, DP,
-              Graphs)
-            </li>
-            <li>
-              Active participant in coding contests on LeetCode & HackerRank
-            </li>
-          </ul>
+
+        <section id="github">
+          <div className="github-heading">
+            <h5>OPEN SOURCE</h5>
+            <h3>GitHub Portfolio</h3>
+          </div>
+          <p>
+            My GitHub portfolio is a collection of my projects, code, and
+            hands-on work in Java, Spring Boot, and React. Explore my
+            repositories to see backend systems, full-stack applications, APIs,
+            and real-world development projects.
+          </p>
+          <div className="github-logo">
+            <div className="s-logo">
+              <FaGithub />
+            </div>
+            <div>
+              <div className="github-profile">ArpitTyagi0001</div>
+              <div className="github-profile-1">
+                <div>Java Full Stack Developer</div>
+              </div>
+            </div>
+            <div>
+              <div className="github-logo-1">
+                <a
+                  href="https://github.com/ArpitTyagi0001"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FaGithub />
+                  Visit Profile
+                </a>
+              </div>
+            </div>
+          </div>
         </section>
         <section id="contact">
-          <h3>Contact Me</h3>
-          <p>Have an opportunity or just want to say hi? Fill this out.</p>
-          <form
-            action="https://formspree.io/f/xkjwlwkb"
-            method="POST"
-            encType="multipart/form-data"
-          >
-            <div className="name">
-              <label htmlFor="name">Name : </label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            <br></br>
-            <div className="email">
-              <label htmlFor="email">Email : </label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <br></br>
-            <div className="msg">
-              <label htmlFor="msg">Message : </label>
-              <textarea id="msg" name="msg" required />
-            </div>
-            <br></br>
-            <div className="attachment">
-              <label htmlFor="attachment">Attachment (optional) :</label>
-              <input type="file" id="attachment" name="attachment" />
-            </div>
-            <button type="submit" className="button">
-              Send
-            </button>
-          </form>
-        </section>
-        <section id="github">
-          <div className="text">
-            <div>OPEN SOURCE</div>
-            <div>GitHub Portfolio</div>
-            <p>
-              My GitHub portfolio is a collection of my projects, code, and
-              hands-on work in Java, Spring Boot, and React. Explore my
-              repositories to see backend systems, full-stack applications,
-              APIs, and real-world development projects.
-            </p>
+          <div className="contact-heading">
+            <h5>Get In Touch</h5>
+            <h3> Let's Connect</h3>
           </div>
-          <div className="logo">
-            <FaGithub />
-            <div className="github-profile">
-              <div>ArpitTyagi0001</div>
-              <div>Java Full Stack Developer</div>
+          <p className="connect-about">
+            I'm currently looking for Java Full Stack Developer opportunities.
+            Whether it's a job opportunity, collaboration or just a friendly
+            conversation, I'd love to hear from you.
+          </p>
+          <div className="connect-info">
+            <div className="connect-info-1">
+              <div className="connect-email">
+                <span className="connect-logo">
+                  <FaEnvelope />
+                </span>
+                <p className="connect-name">Email</p>
+                <a
+                  href="mailto:arpittyagi389@gmail.com"
+                  className="connect-email-link"
+                >
+                  arpittyagi389@gmail.com
+                </a>
+              </div>
+              <div className="connect-linkedin">
+                <span className="connect-logo">
+                  <FaLinkedin />
+                </span>
+                <p className="connect-name">Linkedin</p>
+                <a
+                  href="https://www.linkedin.com/in/arpit-tyagi0001/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="linkedin"
+                >
+                  View Profile
+                </a>
+              </div>
             </div>
+
+            <div className="connect-info-2">
+              <div className="connect-location">
+                <span className="connect-logo">
+                  <FaMapMarkerAlt />
+                </span>
+                <p className="connect-name">Location</p>
+                <p className="connect-location-1">Meerut , India</p>
+              </div>
+              <div className="connect-stay">
+                <span className="connect-logo">
+                  <FaBriefcase />
+                </span>
+                <p className="connect-name">Status</p>
+                <p className="connect-stay-name-1">Open To Work</p>
+              </div>
+            </div>
+            <a
+              href="https://wa.me/918445970389"
+              target="_blank"
+              rel="noreferrer"
+              className="whatsapp"
+            >
+              <FaWhatsapp />
+              Let's Connect on WhatsApp
+            </a>
           </div>
         </section>
       </main>
