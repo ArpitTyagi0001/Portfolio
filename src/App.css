@@ -140,6 +140,13 @@ html {
   margin-bottom: 10px;
 }
 
+.intro h1 span {
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 .intro h2 {
   font-size: 40px;
   margin-top: 25px;
@@ -149,8 +156,9 @@ html {
 .me {
   margin-top: 20px;
   margin-bottom: 30px;
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #cbd5e1;
 }
 
 .highlight {
@@ -196,6 +204,12 @@ html {
   background: linear-gradient(135deg, #8b5cf6, #3b82f6);
 }
 
+.home-both-1:hover,
+.home-both-2:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(139, 92, 246, 0.4);
+}
+
 .social-links {
   display: flex;
   gap: 30px;
@@ -214,17 +228,330 @@ html {
   justify-content: center;
 
   border-radius: 50%;
-  background-color: #5f5e69;
+  background-color: #302c5d;
+}
+
+.social-links a:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+}
+
+.ring {
+  width: 411px;
+  height: 411px;
+  border-radius: 50%;
+  margin-top: 100px;
+  margin-right: 30px;
+  padding: 6px;
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.5);
+}
+
+.border-black {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 5px;
+  background: #030305;
+  box-sizing: border-box;
 }
 
 .profile-pic {
-  width: 385px;
-  height: 385px;
-  margin-top: 32px;
-  margin-right: 22px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  border: 2px solid #8b5cf6;
   object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.some-key {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.stat-box {
+  font-size: 20px;
+  padding: 25px 25px;
+  width: 300px;
+  height: 120px;
+  border-radius: 20px;
+  border: 1px solid #16142a;
+  background-color: #302c5d;
+}
+
+.stat-number {
+  font-weight: 700;
+  color: #8b5cf6;
+  text-align: center;
+}
+
+.stat-label {
+  font-weight: 1000;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.stat-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(139, 92, 246, 0.4);
+}
+
+#about {
+  min-height: 110vh;
+  padding: 80px 10%;
+  color: white;
+  background: linear-gradient(135deg, #211d4d 0%, #111d29 100%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#about h3 {
+  text-align: center;
+  font-size: 60px;
+  margin-bottom: 70px;
+}
+
+.about {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 80px;
+}
+
+.developer-box {
+  flex: 0 0 450px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.developer-photo {
+  width: 500px;
+  height: 500px;
+
+  object-fit: cover;
+
+  border: 2px solid #2a255b;
+  border-radius: 20px;
+
+  padding: 8px;
+
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+}
+
+.about-content {
+  flex: 1;
+  max-width: 600px;
+}
+
+.greet {
+  font-size: 18px;
+  font-weight: 600;
+  color: #c4b5fd;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.profile {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 25px;
+
+  color: #cbd5e1;
+  font-size: 17px;
+}
+
+.location svg {
+  color: #c4b5fd;
+  font-size: 20px;
+}
+
+.about-description {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #cbd5e1;
+  margin-bottom: 30px;
+}
+
+.some-key-1 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.stat-box-1 {
+  font-size: 20px;
+  padding: 25px 25px;
+  width: 300px;
+  height: 120px;
+  border-radius: 20px;
+  border: 1px solid #16142a;
+  background-color: #302c5d;
+}
+
+.stat-number-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  font-weight: 700;
+  text-align: center;
+}
+
+.stat-icon-1 {
+  font-size: 20px;
+}
+
+.stat-label-1 {
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.stat-box-1:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(139, 92, 246, 0.4);
+}
+
+.about ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about ul li {
+  padding: 8px 16px;
+
+  border: 1px solid #8b5cf6;
+  border-radius: 20px;
+
+  background: rgba(139, 92, 246, 0.12);
+
+  color: #e2e8f0;
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: all 0.3s ease;
+}
+
+.about ul li:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
+}
+
+.education-heading {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+#education h3 {
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 20px;
+  margin-bottom: 10px;
+}
+
+.education-card {
+  width: 100%;
+  max-width: 1100px;
+  height: 300px;
+  border-radius: 20px;
+  border: 1px solid #16142a;
+  background-color: #2a2752;
+  margin: 0 auto;
+  padding: 25px 30px;
+}
+
+.education-yr {
+  width: fit-content;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 8px 14px;
+  border: 1px solid #8b5cf6;
+  border-radius: 20px;
+
+  font-size: 13px;
+  color: #c4b5fd;
+  background-color: #302c5d;
+}
+
+.education-year svg {
+  color: #8b5cf6;
+  font-size: 14px;
+}
+
+.education-content {
+  margin-top: 65px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.education-degree,
+.education-college {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.cap,
+.school {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+  background-color: #302c5d;
+  color: #8b5cf6;
+  font-size: 22px;
+}
+
+.education-college {
+  font-size: 18px;
+  font-weight: 400;
+  color: #cbd5e1;
 }
 .footer {
   padding: 20px 20px 20px;

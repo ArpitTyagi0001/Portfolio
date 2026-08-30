@@ -1,11 +1,16 @@
 import "./App.css";
 import photo from "./assets/photo.png";
+import developer from "./assets/developer.png";
+
 import {
   FaGithub,
   FaLinkedin,
   FaEnvelope,
   FaFolder,
   FaDownload,
+  FaMapMarkerAlt,
+  FaGraduationCap,
+  FaSchool,
 } from "react-icons/fa";
 import { SiLeetcode } from "react-icons/si";
 
@@ -53,28 +58,28 @@ function App() {
         <section id="home">
           <div className="intro">
             <p className="greeting">Hello, I'm 👋</p>
-            <h1>Arpit Tyagi</h1>
+            <h1>
+              Arpit <span>Tyagi</span>
+            </h1>
             <h2>Java Full Stack Developer</h2>
             <p className="me">
-              <p>
-                Building scalable applications with{" "}
-                <span className="highlight">
-                  Java, Spring Boot & Microservices
-                </span>
-                . Skilled in{" "}
-                <span className="highlight">
-                  Kafka, Redis, REST APIs & JWT Security
-                </span>
-                . Experienced with{" "}
-                <span className="highlight">React.js, PostgreSQL & Docker</span>
-                . Strong in{" "}
-                <span className="highlight">
-                  DSA, problem-solving & full-stack development
-                </span>
-                . Passionate about writing{" "}
-                <span className="highlight">clean, maintainable code</span> and
-                building reliable systems.
-              </p>
+              Building scalable applications with{" "}
+              <span className="highlight">
+                Java, Spring Boot & Microservices
+              </span>
+              . Skilled in{" "}
+              <span className="highlight">
+                Kafka, Redis, REST APIs & JWT Security
+              </span>
+              . Experienced with{" "}
+              <span className="highlight">React.js, PostgreSQL & Docker</span>.
+              Strong in{" "}
+              <span className="highlight">
+                DSA, problem-solving & full-stack development
+              </span>
+              . Passionate about writing{" "}
+              <span className="highlight">clean, maintainable code</span> and
+              building reliable systems.
             </p>
 
             <div className="home-link">
@@ -133,31 +138,119 @@ function App() {
                 <FaEnvelope />
               </a>
             </div>
+            <div className="some-key">
+              <div className="stat-box">
+                <p className="stat-number">3</p>
+                <p className="stat-label">Projects Built</p>
+              </div>
+
+              <div className="stat-box">
+                <p className="stat-number">450+</p>
+                <p className="stat-label">DSA Solved</p>
+              </div>
+
+              <div className="stat-box">
+                <p className="stat-number">10+</p>
+                <p className="stat-label">Technologies</p>
+              </div>
+            </div>
           </div>
-          <div className="profile-pic">
-            <img src={photo} alt="Arpit Tyagi" className="profile-pic" />
+          <div class="ring">
+            <div class="border-black">
+              <img src={photo} className="profile-pic" alt="Arpit Tyagi" />
+            </div>
           </div>
         </section>
         <section id="about">
-          <h3>About</h3>
-          <p>
-            I'm the kind of developer who wants to know why something works, not
-            just that it does. That curiosity shows up in how I build —
-            designing microservices with Spring Boot and Kafka that don't just
-            function but scale, and solving 450+ algorithmic problems on
-            LeetCode because strong fundamentals make better engineers. I care
-            about clean architecture, secure APIs, and systems that hold up
-            under real load.
-          </p>
+          <h3>About Me</h3>
+          <div className="about">
+            <div className="developer-box">
+              <img
+                src={developer}
+                alt="Arpit Tyagi"
+                className="developer-photo"
+              />
+            </div>
+            <div className="about-content">
+              <p className="greet">👋 WHO I AM</p>
+
+              <p className="profile">Java Full Stack Developer</p>
+              <div className="location">
+                <div>
+                  <FaMapMarkerAlt />
+                </div>
+                Meerut , India
+              </div>
+              <p className="about-description">
+                I'm the kind of developer who wants to know why something works,
+                not just that it does. That curiosity shows up in how I build —
+                designing microservices with Spring Boot and Kafka that don't
+                just function but scale, and solving 450+ algorithmic problems
+                on LeetCode because strong fundamentals make better engineers. I
+                care about clean architecture, secure APIs, and systems that
+                hold up under real load.
+              </p>
+              <div className="some-key-1">
+                <div className="stat-box-1">
+                  <p className="stat-number-1">
+                    <FaGraduationCap className="stat-icon-1" />
+                    Education
+                  </p>
+                  <p className="stat-label-1">B.Tech CSE</p>
+                </div>
+
+                <div className="stat-box-1">
+                  <p className="stat-number-1">
+                    <FaFolder className="stat-icon-1" />
+                    Projects
+                  </p>
+                  <p className="stat-label-1">3+ Real Projects</p>
+                </div>
+              </div>
+
+              <ul>
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>Spring Security</li>
+                <li>Spring AI</li>
+                <li>Jpa</li>
+                <li>Hibernate</li>
+                <li>Microservices</li>
+                <li>Kafka</li>
+                <li>Redis</li>
+                <li>React.js</li>
+                <li>Git & GitHub</li>
+              </ul>
+            </div>
+          </div>
         </section>
 
         <section id="education">
-          <h3>Education</h3>
-          <div>
-            <p>Course : B.Tech in Computer Science & Engineering</p>
-            <p>College : Meerut Institute of Engineering and Technology</p>
-            <p>Duration: 2023 - 2027</p>
-            <p>CGPA : 7.96/10</p>
+          <h3>
+            <div className="education-heading">
+              <FaGraduationCap /> Education
+            </div>
+          </h3>
+
+          <div className="education-card">
+            <div className="education-yr">
+              <span>🟢 2023-2027</span>
+            </div>
+            <div className="education-content">
+              <p className="education-degree">
+                <div className="cap">
+                  <FaGraduationCap />
+                </div>
+                B.Tech in Computer Science & Engineering
+              </p>
+
+              <p className="education-college">
+                <div className="school">
+                  <FaSchool />
+                </div>
+                Meerut Institute of Engineering and Technology
+              </p>
+            </div>
           </div>
         </section>
 
