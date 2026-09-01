@@ -544,29 +544,93 @@ function App() {
         </section>
       </main>
       <footer className="footer">
-        <p className="footer-title">Let's build something together 🚀</p>
-        <p className="footer-link">
-          <a href="mailto:arpittyagi389@gmail.com">Email Me</a>
+        <div className="footer-contant">
+          <div className="left-side">
+            <div className="footer-side">
+              <div className="footer-logo">AT</div>
+              <div className="footer-info">
+                <div className="footer-name">Arpit Tyagi</div>
+                <div className="footer-profile">JAVA DEVELOPER</div>
+              </div>
+            </div>
+            <div className="footer-about">
+              <p>
+                I’m passionate about Java Full Stack Development and enjoy
+                building scalable, user-friendly applications. I focus on
+                writing clean, maintainable code and continuously improving my
+                technical skills.
+              </p>
+            </div>
+            <div className="footer-link">
+              <div className="footer-social-links">
+                <a
+                  href="https://www.linkedin.com/in/arpit-tyagi0001/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="footer-linkedin-link"
+                >
+                  <FaLinkedin />
+                </a>
 
-          <a
-            href="https://www.linkedin.com/in/arpit-tyagi0001/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            LinkedIn
-          </a>
+                <a
+                  href="https://github.com/ArpitTyagi0001"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="footer-github-link"
+                >
+                  <FaGithub />
+                </a>
 
-          <a
-            href="https://github.com/ArpitTyagi0001"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GitHub
-          </a>
-        </p>
-        <p className="footer-copyright">
-          © {new Date().getFullYear()} Arpit Tyagi. All rights reserved.
-        </p>
+                <a
+                  href="https://leetcode.com/u/ArpitTyagi123/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="footer-leetcode-link"
+                >
+                  <SiLeetcode />
+                </a>
+
+                <a
+                  href="mailto:arpittyagi389@gmail.com"
+                  className="footer-email-link"
+                >
+                  <FaEnvelope />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="footer-middle">
+            <div className="nav"> QUICK LINKS</div>
+            <nav className="footer-link-1">
+              <a href="#home">Home</a>
+              <a href="#about">About</a>
+              <a href="#skills">Skills</a>
+              <a href="#education">Education</a>
+              <a href="#project">Projects</a>
+              <a href="#github">GitHub</a>
+              <a href="#contact">Contact</a>
+            </nav>
+          </div>
+          <div className="footer-right">
+            <div className="footer-right-title">LET'S CONNECT</div>
+
+            <p className="footer-right-text">
+              Open to opportunities, collaborations, and interesting projects.
+            </p>
+
+            <a href="#contact" className="footer-cnt">
+              Get in touch <span>↗</span>
+            </a>
+
+            <div className="footer-status">
+              <span className="status-dot"></span>
+              🟢 Available for opportunities
+            </div>
+          </div>
+        </div>
+        <div className="footer-copyright">
+          © 2026 Arpit Tyagi · Think. Build. Evolve.
+        </div>
       </footer>
     </>
   );
