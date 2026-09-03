@@ -1260,18 +1260,22 @@ html {
 
 @media (max-width: 1024px) {
   .header {
-    padding: 0 clamp(16px, 4vw, 40px);
+    padding: 14px clamp(16px, 4vw, 40px);
+    position: relative;
+    flex-wrap: wrap;
   }
 
   .menu-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .header-link {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 10px;
+    gap: 8px;
 
     position: absolute;
     top: 100%;
@@ -1280,73 +1284,106 @@ html {
 
     background-color: #0f172a;
     border-top: 1px solid #322c74;
-    padding: 20px;
+    padding: 16px;
 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
     z-index: 50;
+
+    max-height: 0;
+    overflow: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+    transition:
+      max-height 0.3s ease,
+      opacity 0.25s ease,
+      padding 0.3s ease;
   }
 
   .header-link.open {
-    display: flex;
+    max-height: 500px;
+    opacity: 1;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   .header-link a {
     width: 100%;
     text-align: center;
-    padding: 14px 12px;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+
+  .header-link a:hover {
+    background-color: #16213e;
   }
 
   .header-link .contact,
   .header-link .resume-btn {
     width: 100%;
     height: auto;
+    min-height: 44px;
+    padding: 12px;
+    margin-top: 4px;
+  }
+
+  .header-link .both {
     justify-content: center;
+    gap: 8px;
   }
 }
 
 @media (max-width: 768px) {
   .header {
-    height: auto;
-    min-height: 70px;
-    padding: 15px 18px;
-    position: relative;
+    padding: 12px 18px;
   }
 
   .temp {
     gap: 10px;
   }
 
+  .header-logo {
+    padding: 8px 10px;
+    font-size: 16px;
+  }
+
+  .header-info {
+    gap: 0;
+  }
+
   .header-name {
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.2;
   }
 
   .header-profile {
     font-size: 10px;
+    letter-spacing: 0.5px;
   }
 
-  .header-link {
-    padding: 16px;
-    gap: 8px;
-  }
-
-  .header-link a {
-    font-size: 15px;
-    padding: 12px;
+  .menu-toggle {
+    font-size: 22px;
+    padding: 6px;
   }
 }
 
 @media (max-width: 380px) {
   .header {
-    padding: 12px 14px;
+    padding: 10px 14px;
   }
 
   .header-logo {
-    padding: 8px;
+    padding: 6px 8px;
     font-size: 14px;
   }
 
   .header-name {
-    font-size: 18px;
+    font-size: 16px;
+  }
+
+  .header-profile {
+    font-size: 9px;
   }
 
   .menu-toggle {
@@ -1361,18 +1398,14 @@ html {
 
 @media (max-width: 330px) {
   .header {
-    padding: 10px 12px;
-  }
-
-  .header-info {
-    gap: 0;
+    padding: 8px 12px;
   }
 
   .header-name {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .header-profile {
-    font-size: 9px;
+    font-size: 8px;
   }
 }
