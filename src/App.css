@@ -1,18 +1,11 @@
-html,
-body {
-  width: 100%;
-  max-width: 100%;
+* {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  background-color: #0f172a;
+  box-sizing: border-box;
 }
 
-#root {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-  background-color: #0f172a;
+html {
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -1265,154 +1258,386 @@ body {
   padding: 2px;
 }
 
+/* ============ Tablet (≤1024px) ============ */
 @media (max-width: 1024px) {
-  .header {
-    padding: 14px clamp(16px, 4vw, 40px);
-    position: relative;
+  #home {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: auto;
+    padding: 50px 6% 80px;
+    gap: 40px;
+  }
+
+  .intro {
+    max-width: 100%;
+  }
+
+  .home-link,
+  .social-links {
+    justify-content: center;
+  }
+
+  .some-key {
+    justify-content: center;
     flex-wrap: wrap;
   }
 
-  .menu-toggle {
-    display: flex;
-    align-items: center;
+  .ring {
+    order: -1;
+    margin: 0 auto;
+  }
+
+  .about {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .developer-box {
+    flex: none;
+  }
+
+  .location {
     justify-content: center;
   }
 
-  .header-link {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-
-    background-color: #0f172a;
-    border-top: 1px solid #322c74;
-    padding: 16px;
-
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
-    z-index: 50;
-
-    max-height: 0;
-    overflow: hidden;
-    padding-top: 0;
-    padding-bottom: 0;
-    opacity: 0;
-    transition:
-      max-height 0.3s ease,
-      opacity 0.25s ease,
-      padding 0.3s ease;
+  .some-key-1 {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
-  .header-link.open {
-    max-height: 500px;
-    opacity: 1;
-    padding-top: 16px;
-    padding-bottom: 16px;
+  .about ul {
+    justify-content: center;
   }
 
-  .header-link a {
+  .skill {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px 20px;
+  }
+
+  .project {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px 20px;
+  }
+
+  .project-card {
     width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .github-logo {
+    width: 100%;
+    max-width: 700px;
+    flex-wrap: wrap;
+    height: auto;
+    padding: 20px;
+  }
+
+  .github-logo-1 {
+    margin-left: 0;
+    margin-top: 15px;
+  }
+
+  .connect-info {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    padding: 30px;
+  }
+
+  .footer-contant {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .left-side,
+  .footer-middle,
+  .footer-right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footer-link-1 {
+    margin-left: 0;
+  }
+}
+
+/* ============ Mobile (≤768px) ============ */
+@media (max-width: 768px) {
+  .opp {
+    margin-left: 0;
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
     text-align: center;
-    padding: 12px;
-    border-radius: 10px;
-    font-size: 15px;
+    font-size: 14px;
   }
 
-  .header-link a:hover {
-    background-color: #16213e;
+  #home {
+    padding: 40px 6% 60px;
   }
 
-  .header-link .contact,
-  .header-link .resume-btn {
+  .greeting {
+    font-size: 22px;
+  }
+
+  .intro h1 {
+    font-size: clamp(42px, 12vw, 65px);
+  }
+
+  .intro h2 {
+    font-size: clamp(22px, 6vw, 32px);
+  }
+
+  .me {
+    font-size: 16px;
+  }
+
+  .home-link {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .home-both-1,
+  .home-both-2 {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+
+  .ring {
+    width: min(70vw, 300px);
+    height: min(70vw, 300px);
+  }
+
+  .some-key {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .stat-box {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #about {
+    min-height: auto;
+    padding: 60px 6%;
+  }
+
+  #about h3 {
+    font-size: clamp(36px, 9vw, 48px);
+    margin-bottom: 40px;
+  }
+
+  .developer-photo {
+    width: min(75vw, 350px);
+    height: min(75vw, 350px);
+  }
+
+  .about-description {
+    font-size: 16px;
+  }
+
+  .some-key-1 {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .stat-box-1 {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #education h3 {
+    font-size: clamp(32px, 8vw, 48px);
+    padding: 50px 20px;
+    text-align: center;
+  }
+
+  .education-card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .education-degree,
+  .education-college,
+  .education-about {
+    font-size: 17px;
+  }
+
+  #skills {
+    min-height: auto;
+    padding: 50px 6%;
+  }
+
+  #skills h5 {
+    margin-top: 0;
+  }
+
+  #skills h3 {
+    font-size: clamp(30px, 8vw, 42px);
+  }
+
+  .skill {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+    padding: 0;
+    gap: 20px;
+  }
+
+  .lang {
+    min-height: auto;
+    padding: 25px;
+  }
+
+  #project {
+    min-height: auto;
+    padding: 50px 6%;
+  }
+
+  #project h3 {
+    font-size: clamp(30px, 8vw, 42px);
+  }
+
+  .project {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+    padding: 0;
+    gap: 25px;
+  }
+
+  .project-card {
     width: 100%;
     height: auto;
-    min-height: 44px;
-    padding: 12px;
-    margin-top: 4px;
+    padding: 25px;
   }
 
-  .header-link .both {
+  #github {
+    min-height: auto;
+    padding: 50px 6%;
+  }
+
+  #github h3 {
+    font-size: clamp(30px, 8vw, 42px);
+  }
+
+  #github p {
+    font-size: 17px;
+  }
+
+  .github-logo {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .s-logo {
+    margin-left: 0;
+  }
+
+  .github-profile,
+  .github-profile-1 {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .github-profile {
+    font-size: 32px;
+  }
+
+  #contact {
+    min-height: auto;
+    padding: 50px 6%;
+  }
+
+  #contact h3 {
+    font-size: clamp(30px, 8vw, 42px);
+  }
+
+  .connect-about {
+    font-size: 17px;
+  }
+
+  .connect-info {
+    padding: 25px 20px;
+    border-radius: 30px;
+  }
+
+  .connect-info-1,
+  .connect-info-2 {
+    flex-direction: column;
+  }
+
+  .whatsapp {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    padding: 14px;
+  }
+
+  .footer {
+    min-height: auto;
+  }
+
+  .footer-contant {
+    flex-direction: column;
+    padding: 50px 0 30px;
+    gap: 35px;
+  }
+
+  .footer-side {
     justify-content: center;
-    gap: 8px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .footer-about {
+    text-align: center;
+  }
+
+  .footer-social-links {
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .footer-middle,
+  .footer-right {
+    text-align: center;
+  }
+
+  .footer-link-1 {
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .footer-cnt {
+    margin: 0 auto;
   }
 }
 
-@media (max-width: 768px) {
-  .header {
-    padding: 12px 18px;
+/* ============ Small mobile (≤480px) ============ */
+@media (max-width: 480px) {
+  .intro h1 {
+    font-size: clamp(36px, 11vw, 50px);
   }
 
-  .temp {
-    gap: 10px;
+  .project-card ul li,
+  .about ul li {
+    font-size: 13px;
+    padding: 6px 12px;
   }
 
-  .header-logo {
-    padding: 8px 10px;
+  .p-logo h4 {
+    font-size: 24px;
+  }
+
+  .project-card p {
     font-size: 16px;
-  }
-
-  .header-info {
-    gap: 0;
-  }
-
-  .header-name {
-    font-size: 18px;
-    line-height: 1.2;
-  }
-
-  .header-profile {
-    font-size: 10px;
-    letter-spacing: 0.5px;
-  }
-
-  .menu-toggle {
-    font-size: 22px;
-    padding: 6px;
-  }
-}
-
-@media (max-width: 380px) {
-  .header {
-    padding: 10px 14px;
-  }
-
-  .header-logo {
-    padding: 6px 8px;
-    font-size: 14px;
-  }
-
-  .header-name {
-    font-size: 16px;
-  }
-
-  .header-profile {
-    font-size: 9px;
-  }
-
-  .menu-toggle {
-    font-size: 20px;
-  }
-
-  .header-link a {
-    font-size: 14px;
-    padding: 10px;
-  }
-}
-
-@media (max-width: 330px) {
-  .header {
-    padding: 8px 12px;
-  }
-
-  .header-name {
-    font-size: 15px;
-  }
-
-  .header-profile {
-    font-size: 8px;
   }
 }
