@@ -1258,578 +1258,121 @@ html {
   padding: 2px;
 }
 
-html {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
-  overflow-x: hidden;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-img,
-video,
-svg {
-  max-width: 100%;
-  height: auto;
-}
-
 @media (max-width: 1024px) {
-  section,
-  header,
-  footer,
-  main,
-  div {
-    max-width: 100%;
-  }
-
-  header {
-    width: 100%;
+  .header {
     padding: 0 clamp(16px, 4vw, 40px);
   }
 
-  .temp {
-    margin-left: 0;
-  }
-
-  .header-link {
-    margin-right: 0;
-    gap: clamp(15px, 3vw, 30px);
-  }
-
-  #home {
-    width: 100%;
-    min-height: auto;
-    padding: clamp(50px, 8vw, 80px) clamp(20px, 6vw, 70px);
-
-    gap: clamp(30px, 6vw, 60px);
-
-    overflow: hidden;
-  }
-
-  .intro {
-    max-width: 100%;
-  }
-
-  .intro h1 {
-    font-size: clamp(55px, 9vw, 90px);
-    line-height: 1.05;
-    max-width: 100%;
-  }
-
-  .ring {
-    width: min(45vw, 411px);
-    height: min(45vw, 411px);
-
-    margin-left: auto;
-    margin-right: auto;
-
-    flex-shrink: 1;
-  }
-
-  #about {
-    width: 100%;
-    min-height: auto;
-
-    padding: clamp(60px, 8vw, 100px) clamp(20px, 6vw, 70px);
-
-    overflow: hidden;
-  }
-
-  .about {
-    width: 100%;
-    max-width: 1200px;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    gap: clamp(40px, 6vw, 80px);
-  }
-
-  .developer-box {
-    flex-basis: auto;
-    width: 100%;
-    max-width: 450px;
-  }
-
-  .developer-photo {
-    width: min(45vw, 500px);
-    height: min(45vw, 500px);
-
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .some-key {
-    width: 100%;
-    max-width: 100%;
-
-    gap: clamp(15px, 3vw, 30px);
-  }
-
-  .stat-box {
-    width: min(300px, 100%);
-  }
-
-  #education {
-    width: 100%;
-    overflow: hidden;
-  }
-
-  #education h3 {
-    font-size: clamp(42px, 7vw, 60px);
-    padding: clamp(50px, 8vw, 80px) clamp(20px, 5vw, 50px);
-  }
-
-  .education-card {
-    width: min(1000px, calc(100% - 40px));
-    height: auto;
-    min-height: 250px;
-
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  #skills {
-    width: 100%;
-    min-height: auto;
-
-    padding: clamp(50px, 8vw, 80px) clamp(20px, 5vw, 50px);
-
-    overflow: hidden;
-  }
-
-  #skills h5 {
-    margin-top: clamp(50px, 10vw, 120px);
-  }
-
-  .skill-grid {
-    width: 100%;
-
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: clamp(20px, 4vw, 40px);
-  }
-
-  .lang {
-    width: 100%;
-    min-height: 450px;
-  }
-
-  #project {
-    width: 100%;
-    min-height: auto;
-
-    padding: clamp(50px, 8vw, 80px) clamp(20px, 5vw, 50px);
-
-    overflow: hidden;
-  }
-
-  .project-grid {
-    width: 100%;
-
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: clamp(20px, 4vw, 40px);
-  }
-
-  .project-card {
-    width: 100%;
-    max-width: 400px;
-
-    height: auto;
-    min-height: 500px;
-
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  #github {
-    width: 100%;
-    min-height: auto;
-
-    padding: 60px 20px;
-
-    overflow: hidden;
-  }
-
-  .github-logo {
-    width: min(90vw, 1000px);
-
-    margin-left: auto;
-    margin-right: auto;
-
+  .menu-toggle {
     display: block;
   }
 
-  .github-logo-1 {
-    margin-left: auto;
-    margin-right: auto;
+  .header-link {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    background-color: #0f172a;
+    border-top: 1px solid #322c74;
+    padding: 20px;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    z-index: 50;
   }
 
-  #contact {
+  .header-link.open {
+    display: flex;
+  }
+
+  .header-link a {
     width: 100%;
-    min-height: auto;
-
-    padding: clamp(50px, 8vw, 80px) clamp(20px, 5vw, 50px);
-
-    overflow: hidden;
+    text-align: center;
+    padding: 14px 12px;
   }
 
-  .connect-info {
-    width: min(1200px, 100%);
+  .header-link .contact,
+  .header-link .resume-btn {
+    width: 100%;
     height: auto;
-
-    min-height: 500px;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    padding: clamp(30px, 6vw, 60px);
-
-    border-radius: clamp(25px, 5vw, 60px);
-  }
-
-  .footer {
-    width: 100%;
-    min-height: auto;
-
-    padding: 60px 20px;
-
-    overflow: hidden;
-  }
-
-  .footer-content {
-    width: 100%;
-    max-width: 1200px;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    gap: clamp(30px, 6vw, 60px);
-  }
-
-  .footer-link-1 {
-    margin-left: 0;
+    justify-content: center;
   }
 }
 
 @media (max-width: 768px) {
-  header {
+  .header {
     height: auto;
     min-height: 70px;
-
     padding: 15px 18px;
+    position: relative;
+  }
 
-    flex-wrap: wrap;
+  .temp {
+    gap: 10px;
+  }
+
+  .header-name {
+    font-size: 20px;
+  }
+
+  .header-profile {
+    font-size: 10px;
   }
 
   .header-link {
-    margin: 0;
-    gap: 15px;
+    padding: 16px;
+    gap: 8px;
   }
 
-  #home {
-    width: 100%;
-
-    padding: 50px 18px 70px;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-
-    gap: 45px;
-  }
-
-  .intro {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-
-    text-align: center;
-  }
-
-  .intro h1 {
-    width: 100%;
-
-    font-size: clamp(42px, 13vw, 65px);
-
-    line-height: 1.05;
-
-    overflow-wrap: break-word;
-    word-break: normal;
-  }
-
-  .ring {
-    width: min(82vw, 320px);
-    height: min(82vw, 320px);
-
-    margin: 10px auto 0;
-
-    flex-shrink: 0;
-  }
-
-  #about {
-    padding: 60px 18px;
-  }
-
-  .about {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-
-    gap: 45px;
-  }
-
-  .developer-box {
-    width: 100%;
-    max-width: 500px;
-
-    flex-basis: auto;
-  }
-
-  .developer-photo {
-    width: min(82vw, 330px);
-    height: min(82vw, 330px);
-
-    margin: 0 auto;
-
-    display: block;
-  }
-
-  .some-key {
-    width: 100%;
-
-    display: grid;
-
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    gap: 12px;
-  }
-
-  .stat-box {
-    width: 100%;
-    min-width: 0;
-  }
-
-  #education h3 {
-    font-size: clamp(38px, 12vw, 55px);
-
-    padding: 50px 18px;
-
-    text-align: center;
-  }
-
-  .education-card {
-    width: calc(100% - 36px);
-
-    min-height: 220px;
-
-    margin: 0 auto;
-
-    padding: 25px;
-  }
-
-  #skills {
-    padding: 60px 18px;
-  }
-
-  #skills h5 {
-    margin-top: 40px;
-  }
-
-  .skill-grid {
-    grid-template-columns: 1fr;
-
-    gap: 20px;
-  }
-
-  .lang {
-    width: 100%;
-    min-height: auto;
-
-    padding: 25px;
-  }
-
-  #project {
-    padding: 60px 18px;
-  }
-
-  .project-grid {
-    grid-template-columns: 1fr;
-
-    gap: 25px;
-  }
-
-  .project-card {
-    width: 100%;
-    max-width: 450px;
-
-    min-height: auto;
-
-    margin: 0 auto;
-  }
-
-  #github {
-    padding: 60px 18px;
-  }
-
-  .github-logo {
-    width: 100%;
-    max-width: 350px;
-
-    margin: 30px auto;
-
-    display: block;
-  }
-
-  .github-logo-1 {
-    width: 100%;
-    max-width: 100%;
-
-    margin: 0 auto;
-  }
-
-  #contact {
-    padding: 60px 18px;
-  }
-
-  .connect-info {
-    width: 100%;
-
-    min-height: auto;
-
-    padding: 30px 20px;
-
-    border-radius: 25px;
-  }
-
-  .footer {
-    padding: 60px 18px;
-  }
-
-  .footer-content {
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-
-    gap: 30px;
-  }
-
-  .footer-link-1 {
-    margin-left: 0;
+  .header-link a {
+    font-size: 15px;
+    padding: 12px;
   }
 }
 
 @media (max-width: 380px) {
-  #home,
-  #about,
-  #skills,
-  #project,
-  #contact {
-    padding-left: 14px;
-    padding-right: 14px;
+  .header {
+    padding: 12px 14px;
   }
 
-  .intro h1 {
-    font-size: clamp(38px, 12vw, 50px);
+  .header-logo {
+    padding: 8px;
+    font-size: 14px;
   }
 
-  .ring {
-    width: min(85vw, 290px);
-    height: min(85vw, 290px);
+  .header-name {
+    font-size: 18px;
   }
 
-  .developer-photo {
-    width: min(85vw, 290px);
-    height: min(85vw, 290px);
+  .menu-toggle {
+    font-size: 20px;
   }
 
-  .some-key {
-    grid-template-columns: 1fr;
-  }
-
-  .education-card {
-    width: calc(100% - 28px);
+  .header-link a {
+    font-size: 14px;
+    padding: 10px;
   }
 }
 
 @media (max-width: 330px) {
-  header {
-    padding-left: 12px;
-    padding-right: 12px;
+  .header {
+    padding: 10px 12px;
   }
 
-  #home,
-  #about,
-  #skills,
-  #project,
-  #contact {
-    padding-left: 12px;
-    padding-right: 12px;
+  .header-info {
+    gap: 0;
   }
 
-  .intro h1 {
-    font-size: 36px;
+  .header-name {
+    font-size: 16px;
   }
 
-  .ring {
-    width: 260px;
-    height: 260px;
-  }
-
-  .developer-photo {
-    width: 260px;
-    height: 260px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .opp,
-  .temp,
-  .github-logo-1,
-  .footer-link-1 {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .project-card,
-  .education-card,
-  .connect-info,
-  .developer-box,
-  .lang,
-  .stat-box {
-    min-width: 0;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  span,
-  a {
-    max-width: 100%;
-    overflow-wrap: break-word;
+  .header-profile {
+    font-size: 9px;
   }
 }
