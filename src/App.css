@@ -1257,3 +1257,428 @@ html {
   letter-spacing: 1px;
   padding: 2px;
 }
+
+@media (max-width: 768px) {
+  .header {
+    height: auto;
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .temp {
+    margin-left: 0;
+  }
+
+  .header-link {
+    margin-right: 0;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header-link a {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .both {
+    gap: 10px;
+  }
+
+  #home {
+    min-height: auto;
+    padding: 40px 20px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .opp {
+    margin-left: 0;
+  }
+
+  .intro {
+    max-width: 100%;
+  }
+
+  .greeting {
+    font-size: 22px;
+  }
+
+  .intro h1 {
+    font-size: 55px;
+  }
+
+  .intro h2 {
+    font-size: 28px;
+  }
+
+  .me {
+    font-size: 16px;
+  }
+
+  .home-link {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .home-both-1,
+  .home-both-2 {
+    width: 220px;
+  }
+
+  .social-links {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .ring {
+    width: 280px;
+    height: 280px;
+    margin: 20px auto;
+  }
+
+  .some-key {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .stat-box {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  #about {
+    min-height: auto;
+    padding: 60px 20px;
+  }
+
+  #about h3 {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+
+  .about {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .developer-box {
+    flex: none;
+    width: 100%;
+  }
+
+  .developer-photo {
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+  }
+
+  .about-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .profile {
+    font-size: 27px;
+  }
+
+  .about-description {
+    font-size: 16px;
+  }
+
+  .some-key-1 {
+    flex-direction: column;
+  }
+
+  .stat-box-1 {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .about ul {
+    justify-content: center;
+  }
+
+  .education {
+    min-height: auto;
+    padding-bottom: 60px;
+  }
+
+  #education h3 {
+    font-size: 40px;
+    padding: 60px 20px 40px;
+  }
+
+  .education-card {
+    width: calc(100% - 40px);
+    height: auto;
+    padding: 25px 20px;
+  }
+
+  .education-degree,
+  .education-college,
+  .education-about {
+    font-size: 16px;
+  }
+
+  #skills {
+    min-height: auto;
+    padding: 50px 20px;
+  }
+
+  #skills h5 {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  #skills h3 {
+    font-size: 38px;
+    text-align: center;
+  }
+
+  .skill {
+    margin-top: 40px;
+    padding: 10px 0;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .lang {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  #project {
+    min-height: auto;
+    padding: 50px 20px;
+  }
+
+  #project h5 {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+
+  #project h3 {
+    font-size: 38px;
+  }
+
+  .project {
+    margin-top: 40px;
+    padding: 10px 0;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .project-card {
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    padding: 25px;
+  }
+
+  .project-card p {
+    font-size: 16px;
+  }
+
+  #github {
+    min-height: auto;
+    padding: 50px 20px;
+  }
+
+  .github-heading {
+    padding-top: 20px;
+  }
+
+  #github h5 {
+    font-size: 20px;
+  }
+
+  #github h3 {
+    font-size: 38px;
+  }
+
+  #github p {
+    font-size: 17px;
+  }
+
+  .github-logo {
+    width: 100%;
+    height: auto;
+    min-height: 150px;
+    margin-top: 40px;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .s-logo {
+    margin-left: 0;
+  }
+
+  .github-profile,
+  .github-profile-1 {
+    margin-left: 0;
+  }
+
+  .github-profile {
+    font-size: 30px;
+  }
+
+  .github-logo-1 {
+    margin-left: auto;
+  }
+
+  #contact {
+    min-height: auto;
+    padding: 50px 20px;
+    padding-bottom: 80px;
+  }
+
+  .contact-heading {
+    padding-top: 20px;
+  }
+
+  #contact h5 {
+    font-size: 20px;
+  }
+
+  #contact h3 {
+    font-size: 38px;
+  }
+
+  .connect-about {
+    font-size: 17px;
+  }
+
+  .connect-info {
+    width: 100%;
+    height: auto;
+    padding: 25px;
+    border-radius: 30px;
+  }
+
+  .connect-info-1,
+  .connect-info-2 {
+    flex-direction: column;
+  }
+
+  .connect-email,
+  .connect-linkedin,
+  .connect-location,
+  .connect-stay {
+    min-height: 160px;
+  }
+
+  .whatsapp {
+    width: 100%;
+    max-width: 355px;
+    font-size: 20px;
+  }
+
+  .footer {
+    min-height: auto;
+  }
+
+  .footer-contant {
+    width: 90%;
+    padding: 50px 0;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .left-side,
+  .footer-middle,
+  .footer-right {
+    width: 100%;
+    max-width: none;
+  }
+
+  .footer-side {
+    margin-bottom: 30px;
+  }
+
+  .footer-social-links {
+    margin-top: 30px;
+  }
+
+  .footer-link-1 {
+    margin-left: 0;
+  }
+
+  .footer-copyright {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .header {
+    padding: 0 25px;
+  }
+
+  .temp {
+    margin-left: 0;
+  }
+
+  .header-link {
+    margin-right: 0;
+    gap: 10px;
+  }
+
+  #home {
+    padding: 40px 5%;
+    gap: 30px;
+  }
+
+  .intro h1 {
+    font-size: 70px;
+  }
+
+  .ring {
+    width: 330px;
+    height: 330px;
+    margin-right: 0;
+  }
+
+  .skill {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px 30px;
+  }
+
+  .project {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px 30px;
+  }
+
+  .project-card {
+    width: 100%;
+  }
+
+  .about {
+    gap: 40px;
+  }
+
+  .developer-photo {
+    width: 400px;
+    height: 400px;
+  }
+
+  .github-logo {
+    width: 90%;
+  }
+
+  .github-logo-1 {
+    margin-left: auto;
+  }
+
+  .connect-info {
+    width: 90%;
+  }
+
+  .footer-contant {
+    width: 90%;
+  }
+}
