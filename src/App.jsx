@@ -225,8 +225,8 @@ function App() {
               </div>
             </div>
           </div>
-          <div class="ring">
-            <div class="border-black">
+          <div className="ring">
+            <div className="border-black">
               <img src={photo} className="profile-pic" alt="Arpit Tyagi" />
             </div>
           </div>
