@@ -1258,39 +1258,920 @@ html {
   padding: 2px;
 }
 
-/* ============ Tablet (≤1024px) ============ */
-@media (max-width: 1024px) {
+/* =========================================================
+   RESPONSIVE MEDIA QUERIES
+   Add these at the VERY END of your App.css
+   ========================================================= */
+
+/* =========================================================
+   1. LARGE DESKTOP — 1440px+
+   ========================================================= */
+
+@media (min-width: 1440px) {
   #home {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .about {
+    max-width: 1300px;
+  }
+
+  .skill,
+  .project {
+    max-width: 1450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .connect-info {
+    max-width: 1200px;
+  }
+}
+
+/* =========================================================
+   2. LAPTOP / DESKTOP — 1200px to 1439px
+   ========================================================= */
+
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .header {
+    padding: 0 35px;
+  }
+
+  .temp {
+    margin-left: 10px;
+  }
+
+  .header-link {
+    margin-right: 10px;
+    gap: 10px;
+  }
+
+  .header-link a {
+    font-size: 14px;
+    padding: 10px 8px;
+  }
+
+  #home {
     min-height: auto;
-    padding: 50px 6% 80px;
+    padding: 70px 6% 100px;
     gap: 40px;
   }
 
   .intro {
-    max-width: 100%;
+    max-width: 620px;
   }
 
-  .home-link,
-  .social-links {
-    justify-content: center;
-  }
-
-  .some-key {
-    justify-content: center;
-    flex-wrap: wrap;
+  .intro h1 {
+    font-size: clamp(70px, 7vw, 90px);
   }
 
   .ring {
-    order: -1;
-    margin: 0 auto;
+    width: 360px;
+    height: 360px;
+    margin-right: 0;
+    margin-top: 80px;
+  }
+
+  .some-key {
+    gap: 15px;
+  }
+
+  .stat-box {
+    width: 180px;
+  }
+
+  #about {
+    min-height: auto;
+    padding: 100px 6%;
+  }
+
+  .about {
+    max-width: 1150px;
+    gap: 50px;
+  }
+
+  .developer-box {
+    flex: 0 0 400px;
+  }
+
+  .developer-photo {
+    width: 400px;
+    height: 400px;
+  }
+
+  .skill {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px 6%;
+    gap: 25px;
+  }
+
+  .lang {
+    min-height: 400px;
+  }
+
+  .project {
+    padding: 10px 6%;
+    gap: 25px;
+  }
+
+  .project-card {
+    width: 100%;
+    height: auto;
+    min-height: 570px;
+  }
+
+  .github-logo {
+    width: 85%;
+  }
+
+  .github-logo-1 {
+    margin-left: auto;
+    margin-right: 40px;
+  }
+
+  .connect-info {
+    width: 90%;
+  }
+}
+
+/* =========================================================
+   3. LAPTOP — 1024px to 1199px
+   ========================================================= */
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .header {
+    padding: 0 25px;
+  }
+
+  .temp {
+    margin-left: 0;
+  }
+
+  .header-link {
+    margin-right: 0;
+    gap: 4px;
+  }
+
+  .header-link a {
+    font-size: 13px;
+    padding: 10px 6px;
+  }
+
+  .resume-btn {
+    width: 105px;
+  }
+
+  #home {
+    min-height: auto;
+    padding: 70px 5% 100px;
+    gap: 35px;
+  }
+
+  .intro {
+    max-width: 560px;
+  }
+
+  .intro h1 {
+    font-size: 75px;
+  }
+
+  .intro h2 {
+    font-size: 34px;
+  }
+
+  .me {
+    font-size: 17px;
+  }
+
+  .ring {
+    width: 330px;
+    height: 330px;
+    margin-top: 80px;
+    margin-right: 0;
+  }
+
+  .home-link {
+    gap: 15px;
+  }
+
+  .home-both-1,
+  .home-both-2 {
+    width: auto;
+    font-size: 16px;
+  }
+
+  .some-key {
+    gap: 12px;
+  }
+
+  .stat-box {
+    width: 165px;
+    height: 110px;
+    padding: 20px 10px;
+  }
+
+  #about {
+    min-height: auto;
+    padding: 90px 5%;
+  }
+
+  #about h3 {
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+
+  .about {
+    gap: 40px;
+  }
+
+  .developer-box {
+    flex: 0 0 380px;
+  }
+
+  .developer-photo {
+    width: 380px;
+    height: 380px;
+  }
+
+  .about-content {
+    max-width: 520px;
+  }
+
+  .profile {
+    font-size: 28px;
+  }
+
+  .about-description {
+    font-size: 16px;
+  }
+
+  .stat-box-1 {
+    width: 230px;
+  }
+
+  #education h3 {
+    font-size: 50px;
+  }
+
+  .education-card {
+    width: 90%;
+  }
+
+  #skills {
+    min-height: auto;
+    padding-bottom: 100px;
+  }
+
+  #skills h5 {
+    margin-top: 100px;
+  }
+
+  .skill {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px 5%;
+    gap: 25px;
+  }
+
+  .lang {
+    min-height: 420px;
+  }
+
+  .project {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px 5%;
+    gap: 25px;
+  }
+
+  .project-card {
+    width: 100%;
+    height: auto;
+    min-height: 550px;
+  }
+
+  #github {
+    min-height: auto;
+    padding-bottom: 100px;
+  }
+
+  #github p {
+    width: 90%;
+    font-size: 20px;
+  }
+
+  .github-logo {
+    width: 90%;
+  }
+
+  .github-profile {
+    font-size: 38px;
+  }
+
+  .github-logo-1 {
+    margin-left: auto;
+    margin-right: 30px;
+  }
+
+  #contact {
+    min-height: auto;
+    padding-bottom: 100px;
+  }
+
+  .connect-info {
+    width: 90%;
+    height: auto;
+    padding: 40px;
+  }
+
+  .connect-name {
+    font-size: 24px;
+  }
+
+  .footer {
+    min-height: auto;
+  }
+}
+
+/* =========================================================
+   4. TABLET LANDSCAPE — 900px to 1023px
+   ========================================================= */
+
+@media (min-width: 900px) and (max-width: 1023px) {
+  .header {
+    padding: 0 25px;
+  }
+
+  .temp {
+    margin-left: 0;
+  }
+
+  .header-link {
+    margin-right: 0;
+    gap: 3px;
+  }
+
+  .header-link a {
+    font-size: 12px;
+    padding: 9px 5px;
+  }
+
+  .resume-btn {
+    width: 100px;
+  }
+
+  #home {
+    min-height: auto;
+    padding: 60px 5% 90px;
+    gap: 30px;
+  }
+
+  .intro {
+    max-width: 530px;
+  }
+
+  .intro h1 {
+    font-size: 68px;
+  }
+
+  .intro h2 {
+    font-size: 32px;
+  }
+
+  .greeting {
+    font-size: 25px;
+  }
+
+  .me {
+    font-size: 16px;
+  }
+
+  .ring {
+    width: 300px;
+    height: 300px;
+    margin-top: 70px;
+    margin-right: 0;
+  }
+
+  .home-link {
+    gap: 15px;
+  }
+
+  .home-both-1,
+  .home-both-2 {
+    width: auto;
+    font-size: 15px;
+    padding: 20px;
+  }
+
+  .some-key {
+    gap: 10px;
+  }
+
+  .stat-box {
+    width: 155px;
+    height: 105px;
+    padding: 18px 8px;
+    font-size: 17px;
+  }
+
+  #about {
+    min-height: auto;
+    padding: 80px 5%;
+  }
+
+  #about h3 {
+    font-size: 48px;
+    margin-bottom: 45px;
+  }
+
+  .about {
+    gap: 30px;
+  }
+
+  .developer-box {
+    flex: 0 0 350px;
+  }
+
+  .developer-photo {
+    width: 350px;
+    height: 350px;
+  }
+
+  .about-content {
+    max-width: 500px;
+  }
+
+  .profile {
+    font-size: 26px;
+  }
+
+  .about-description {
+    font-size: 15px;
+  }
+
+  .stat-box-1 {
+    width: 210px;
+    font-size: 17px;
+  }
+
+  #education h3 {
+    font-size: 48px;
+  }
+
+  .education-card {
+    width: 90%;
+    height: auto;
+  }
+
+  #skills {
+    min-height: auto;
+    padding-bottom: 90px;
+  }
+
+  #skills h5 {
+    margin-top: 80px;
+  }
+
+  .skill {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px 5%;
+    gap: 20px;
+  }
+
+  .lang {
+    min-height: 400px;
+  }
+
+  .lang h4 {
+    font-size: 24px;
+  }
+
+  .lang li {
+    font-size: 17px;
+  }
+
+  .project {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px 5%;
+    gap: 20px;
+  }
+
+  .project-card {
+    width: 100%;
+    height: auto;
+    min-height: 530px;
+    padding: 28px;
+  }
+
+  .p-logo h4 {
+    font-size: 28px;
+  }
+
+  .project-card p {
+    font-size: 17px;
+  }
+
+  #github {
+    min-height: auto;
+    padding-bottom: 90px;
+  }
+
+  #github p {
+    width: 90%;
+    font-size: 19px;
+  }
+
+  .github-logo {
+    width: 90%;
+    height: auto;
+    min-height: 140px;
+  }
+
+  .github-profile {
+    font-size: 34px;
+  }
+
+  .github-logo-1 {
+    margin-left: auto;
+    margin-right: 25px;
+  }
+
+  #contact {
+    min-height: auto;
+    padding-bottom: 90px;
+  }
+
+  .connect-info {
+    width: 90%;
+    height: auto;
+    padding: 35px;
+  }
+
+  .connect-name {
+    font-size: 22px;
+  }
+
+  .footer {
+    min-height: auto;
+  }
+}
+
+/* =========================================================
+   5. TABLET PORTRAIT — 768px to 899px
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 899px) {
+  .header {
+    height: 80px;
+    padding: 0 25px;
+  }
+
+  .temp {
+    margin-left: 0;
+  }
+
+  .header-name {
+    font-size: 21px;
+  }
+
+  .header-link {
+    margin-right: 0;
+    gap: 0;
+  }
+
+  .header-link a {
+    font-size: 11px;
+    padding: 8px 5px;
+  }
+
+  .resume-btn {
+    width: 95px;
+    padding: 15px 10px !important;
+  }
+
+  .opp {
+    margin-left: 5%;
+    font-size: 14px;
+  }
+
+  #home {
+    min-height: auto;
+    padding: 60px 6% 90px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .intro {
+    max-width: 700px;
+  }
+
+  .greeting {
+    font-size: 26px;
+  }
+
+  .intro h1 {
+    font-size: clamp(60px, 10vw, 80px);
+  }
+
+  .intro h2 {
+    font-size: 34px;
+  }
+
+  .me {
+    font-size: 17px;
+  }
+
+  .home-link,
+  .social-links,
+  .some-key {
+    justify-content: center;
+  }
+
+  .ring {
+    width: 330px;
+    height: 330px;
+    margin: 20px 0 0;
+  }
+
+  .stat-box {
+    width: 200px;
+  }
+
+  #about {
+    min-height: auto;
+    padding: 80px 6%;
+  }
+
+  #about h3 {
+    font-size: 48px;
+    margin-bottom: 45px;
   }
 
   .about {
     flex-direction: column;
+    gap: 45px;
+  }
+
+  .developer-box {
+    flex: none;
+  }
+
+  .developer-photo {
+    width: 400px;
+    height: 400px;
+  }
+
+  .about-content {
+    max-width: 700px;
+  }
+
+  #education {
+    padding-bottom: 80px;
+  }
+
+  #education h3 {
+    font-size: 48px;
+  }
+
+  .education-card {
+    width: 88%;
+    height: auto;
+  }
+
+  #skills {
+    min-height: auto;
+    padding-bottom: 90px;
+  }
+
+  #skills h5 {
+    margin-top: 80px;
+    font-size: 18px;
+  }
+
+  #skills h3,
+  #project h3,
+  #github h3,
+  #contact h3 {
+    font-size: 45px;
+  }
+
+  .skill {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px 6%;
+    gap: 25px;
+  }
+
+  .lang {
+    min-height: 400px;
+  }
+
+  .project {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px 6%;
+    gap: 25px;
+  }
+
+  .project-card {
+    width: 100%;
+    height: auto;
+    min-height: 520px;
+    padding: 28px;
+  }
+
+  .p-logo h4 {
+    font-size: 28px;
+  }
+
+  .project-card p {
+    font-size: 17px;
+  }
+
+  #github {
+    min-height: auto;
+    padding: 80px 6% 90px;
+  }
+
+  #github p {
+    width: 100%;
+    font-size: 19px;
+  }
+
+  .github-logo {
+    width: 100%;
+    height: auto;
+    min-height: 140px;
+    padding: 20px;
+  }
+
+  .s-logo {
+    margin-left: 10px;
+  }
+
+  .github-profile {
+    font-size: 30px;
+  }
+
+  .github-logo-1 {
+    margin-left: auto;
+  }
+
+  #contact {
+    min-height: auto;
+    padding: 70px 6% 90px;
+  }
+
+  .connect-info {
+    width: 100%;
+    height: auto;
+    padding: 30px;
+  }
+
+  .connect-name {
+    font-size: 22px;
+  }
+
+  .footer {
+    min-height: auto;
+  }
+
+  .footer-contant {
+    width: 90%;
+    flex-wrap: wrap;
+  }
+
+  .left-side {
+    width: 45%;
+  }
+
+  .footer-middle,
+  .footer-right {
+    width: 45%;
+  }
+}
+
+/* =========================================================
+   6. LARGE PHONE / SMALL TABLET — 640px to 767px
+   ========================================================= */
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .header {
+    height: 75px;
+    padding: 0 20px;
+  }
+
+  .temp {
+    margin-left: 0;
+  }
+
+  .header-name {
+    font-size: 20px;
+  }
+
+  .header-profile {
+    font-size: 10px;
+  }
+
+  .header-link {
+    gap: 0;
+    margin-right: 0;
+  }
+
+  .header-link a {
+    font-size: 10px;
+    padding: 8px 4px;
+  }
+
+  .resume-btn {
+    display: none;
+  }
+
+  .opp {
+    margin-left: 5%;
+    margin-top: 20px;
+    font-size: 13px;
+  }
+
+  #home {
+    min-height: auto;
+    padding: 45px 7% 70px;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+  }
+
+  .intro {
+    max-width: 650px;
+  }
+
+  .greeting {
+    font-size: 23px;
+  }
+
+  .intro h1 {
+    font-size: clamp(52px, 12vw, 70px);
+  }
+
+  .intro h2 {
+    font-size: 30px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .me {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .home-link {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .home-both-1,
+  .home-both-2 {
+    width: auto;
+    font-size: 15px;
+    padding: 18px;
+  }
+
+  .social-links {
+    justify-content: center;
+    margin-top: 35px;
+  }
+
+  .some-key {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .stat-box {
+    width: 160px;
+    height: 100px;
+    padding: 18px 8px;
+    font-size: 16px;
+  }
+
+  .ring {
+    width: 280px;
+    height: 280px;
+    margin: 25px 0 0;
+  }
+
+  #about {
+    min-height: auto;
+    padding: 70px 7%;
+  }
+
+  #about h3 {
+    font-size: 42px;
+    margin-bottom: 40px;
+  }
+
+  .about {
+    flex-direction: column;
     gap: 40px;
   }
 
@@ -1298,144 +2179,17 @@ html {
     flex: none;
   }
 
-  .location {
-    justify-content: center;
+  .developer-photo {
+    width: min(400px, 90vw);
+    height: min(400px, 90vw);
   }
 
-  .some-key-1 {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .about ul {
-    justify-content: center;
-  }
-
-  .skill {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 10px 20px;
-  }
-
-  .project {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 10px 20px;
-  }
-
-  .project-card {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-
-  .github-logo {
-    width: 100%;
-    max-width: 700px;
-    flex-wrap: wrap;
-    height: auto;
-    padding: 20px;
-  }
-
-  .github-logo-1 {
-    margin-left: 0;
-    margin-top: 15px;
-  }
-
-  .connect-info {
-    width: 100%;
-    max-width: 700px;
-    height: auto;
-    padding: 30px;
-  }
-
-  .footer-contant {
-    flex-wrap: wrap;
-    gap: 40px;
-  }
-
-  .left-side,
-  .footer-middle,
-  .footer-right {
-    width: 100%;
+  .about-content {
     max-width: 100%;
   }
 
-  .footer-link-1 {
-    margin-left: 0;
-  }
-}
-
-/* ============ Mobile (≤768px) ============ */
-@media (max-width: 768px) {
-  .opp {
-    margin-left: 0;
-    display: block;
-    width: fit-content;
-    margin: 30px auto 0;
-    text-align: center;
-    font-size: 14px;
-  }
-
-  #home {
-    padding: 40px 6% 60px;
-  }
-
-  .greeting {
-    font-size: 22px;
-  }
-
-  .intro h1 {
-    font-size: clamp(42px, 12vw, 65px);
-  }
-
-  .intro h2 {
-    font-size: clamp(22px, 6vw, 32px);
-  }
-
-  .me {
-    font-size: 16px;
-  }
-
-  .home-link {
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-  }
-
-  .home-both-1,
-  .home-both-2 {
-    width: 100%;
-    max-width: 300px;
-    justify-content: center;
-  }
-
-  .ring {
-    width: min(70vw, 300px);
-    height: min(70vw, 300px);
-  }
-
-  .some-key {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .stat-box {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  #about {
-    min-height: auto;
-    padding: 60px 6%;
-  }
-
-  #about h3 {
-    font-size: clamp(36px, 9vw, 48px);
-    margin-bottom: 40px;
-  }
-
-  .developer-photo {
-    width: min(75vw, 350px);
-    height: min(75vw, 350px);
+  .profile {
+    font-size: 27px;
   }
 
   .about-description {
@@ -1443,26 +2197,30 @@ html {
   }
 
   .some-key-1 {
-    flex-direction: column;
-    width: 100%;
+    gap: 12px;
   }
 
   .stat-box-1 {
-    width: 100%;
-    max-width: 300px;
+    width: 50%;
+    height: auto;
+    min-height: 110px;
+    padding: 20px 10px;
+    font-size: 17px;
+  }
+
+  #education {
+    padding-bottom: 70px;
   }
 
   #education h3 {
-    font-size: clamp(32px, 8vw, 48px);
-    padding: 50px 20px;
-    text-align: center;
+    font-size: 42px;
+    padding: 70px 20px 40px;
   }
 
   .education-card {
-    width: 100%;
-    max-width: 100%;
+    width: 90%;
     height: auto;
-    padding: 20px;
+    padding: 25px;
   }
 
   .education-degree,
@@ -1473,164 +2231,62 @@ html {
 
   #skills {
     min-height: auto;
-    padding: 50px 6%;
+    padding-bottom: 80px;
   }
 
   #skills h5 {
-    margin-top: 0;
+    margin-top: 70px;
+    font-size: 17px;
   }
 
-  #skills h3 {
-    font-size: clamp(30px, 8vw, 42px);
+  #skills h3,
+  #project h3,
+  #github h3,
+  #contact h3 {
+    font-size: 40px;
   }
 
   .skill {
-    grid-template-columns: 1fr;
-    margin-top: 40px;
-    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px 7%;
     gap: 20px;
   }
 
   .lang {
-    min-height: auto;
-    padding: 25px;
+    min-height: 360px;
+    padding: 20px 15px;
+  }
+
+  .lang h4 {
+    font-size: 23px;
+  }
+
+  .lang li {
+    font-size: 17px;
+    margin: 18px 0;
   }
 
   #project {
     min-height: auto;
-    padding: 50px 6%;
+    padding-bottom: 80px;
   }
 
-  #project h3 {
-    font-size: clamp(30px, 8vw, 42px);
+  #project h5 {
+    margin-top: 70px;
+    font-size: 20px;
   }
 
   .project {
-    grid-template-columns: 1fr;
-    margin-top: 40px;
-    padding: 0;
-    gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px 7%;
+    gap: 20px;
   }
 
   .project-card {
     width: 100%;
     height: auto;
+    min-height: 500px;
     padding: 25px;
-  }
-
-  #github {
-    min-height: auto;
-    padding: 50px 6%;
-  }
-
-  #github h3 {
-    font-size: clamp(30px, 8vw, 42px);
-  }
-
-  #github p {
-    font-size: 17px;
-  }
-
-  .github-logo {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px 20px;
-  }
-
-  .s-logo {
-    margin-left: 0;
-  }
-
-  .github-profile,
-  .github-profile-1 {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-
-  .github-profile {
-    font-size: 32px;
-  }
-
-  #contact {
-    min-height: auto;
-    padding: 50px 6%;
-  }
-
-  #contact h3 {
-    font-size: clamp(30px, 8vw, 42px);
-  }
-
-  .connect-about {
-    font-size: 17px;
-  }
-
-  .connect-info {
-    padding: 25px 20px;
-    border-radius: 30px;
-  }
-
-  .connect-info-1,
-  .connect-info-2 {
-    flex-direction: column;
-  }
-
-  .whatsapp {
-    width: 100%;
-    max-width: 320px;
-    height: auto;
-    padding: 14px;
-  }
-
-  .footer {
-    min-height: auto;
-  }
-
-  .footer-contant {
-    flex-direction: column;
-    padding: 50px 0 30px;
-    gap: 35px;
-  }
-
-  .footer-side {
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 25px;
-  }
-
-  .footer-about {
-    text-align: center;
-  }
-
-  .footer-social-links {
-    justify-content: center;
-    margin-top: 30px;
-  }
-
-  .footer-middle,
-  .footer-right {
-    text-align: center;
-  }
-
-  .footer-link-1 {
-    align-items: center;
-    margin-left: 0;
-  }
-
-  .footer-cnt {
-    margin: 0 auto;
-  }
-}
-
-/* ============ Small mobile (≤480px) ============ */
-@media (max-width: 480px) {
-  .intro h1 {
-    font-size: clamp(36px, 11vw, 50px);
-  }
-
-  .project-card ul li,
-  .about ul li {
-    font-size: 13px;
-    padding: 6px 12px;
   }
 
   .p-logo h4 {
@@ -1639,5 +2295,1442 @@ html {
 
   .project-card p {
     font-size: 16px;
+  }
+
+  #github {
+    min-height: auto;
+    padding: 70px 7% 80px;
+  }
+
+  #github h5 {
+    font-size: 20px;
+  }
+
+  #github p {
+    width: 100%;
+    font-size: 17px;
+  }
+
+  .github-logo {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .s-logo {
+    margin-left: 0;
+    width: 70px;
+    height: 70px;
+    font-size: 35px;
+  }
+
+  .github-profile {
+    margin-left: 0;
+    font-size: 25px;
+  }
+
+  .github-profile-1 {
+    margin-left: 0;
+    font-size: 14px;
+  }
+
+  .github-logo-1 {
+    margin-left: auto;
+  }
+
+  #contact {
+    min-height: auto;
+    padding: 70px 7% 80px;
+  }
+
+  .contact-heading {
+    padding-top: 0;
+  }
+
+  #contact h5 {
+    font-size: 20px;
+  }
+
+  .connect-about {
+    width: 100%;
+    font-size: 17px;
+  }
+
+  .connect-info {
+    width: 100%;
+    height: auto;
+    padding: 25px;
+  }
+
+  .connect-info-1,
+  .connect-info-2 {
+    gap: 15px;
+  }
+
+  .connect-email,
+  .connect-linkedin,
+  .connect-location,
+  .connect-stay {
+    min-height: 160px;
+    padding: 15px;
+  }
+
+  .connect-name {
+    font-size: 20px;
+  }
+
+  .whatsapp {
+    width: 100%;
+    max-width: 355px;
+    font-size: 19px;
+    margin-top: 50px;
+  }
+
+  .footer {
+    min-height: auto;
+  }
+
+  .footer-contant {
+    width: 90%;
+    padding: 60px 0 30px;
+    flex-wrap: wrap;
+    gap: 45px;
+  }
+
+  .left-side,
+  .footer-middle,
+  .footer-right {
+    width: 45%;
+  }
+
+  .footer-link-1 {
+    margin-left: 0;
+  }
+}
+
+/* =========================================================
+   7. PHONE — 480px to 639px
+   ========================================================= */
+
+@media (min-width: 480px) and (max-width: 639px) {
+  .header {
+    height: 70px;
+    padding: 0 18px;
+  }
+
+  .temp {
+    margin-left: 0;
+    gap: 10px;
+  }
+
+  .header-logo {
+    padding: 8px;
+    border-radius: 10px;
+  }
+
+  .header-name {
+    font-size: 18px;
+  }
+
+  .header-profile {
+    font-size: 9px;
+  }
+
+  /* Keep existing desktop nav compact */
+  .header-link {
+    margin-right: 0;
+    gap: 0;
+  }
+
+  .header-link a {
+    font-size: 9px;
+    padding: 7px 3px;
+  }
+
+  .header-link .contact {
+    display: none;
+  }
+
+  .header-link .resume-btn {
+    display: none;
+  }
+
+  .opp {
+    margin: 20px 5% 0;
+    font-size: 12px;
+    padding: 8px 12px;
+  }
+
+  #home {
+    min-height: auto;
+    padding: 40px 6% 65px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .intro {
+    max-width: 100%;
+  }
+
+  .greeting {
+    font-size: 21px;
+  }
+
+  .intro h1 {
+    font-size: clamp(48px, 14vw, 65px);
+    line-height: 1.05;
+  }
+
+  .intro h2 {
+    font-size: clamp(25px, 7vw, 32px);
+    margin: 15px 0 20px;
+  }
+
+  .me {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .home-link {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .home-link a {
+    width: 100%;
+  }
+
+  .home-both-1,
+  .home-both-2 {
+    width: 100%;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  .social-links {
+    justify-content: center;
+    gap: 18px;
+    margin-top: 30px;
+  }
+
+  .social-links a {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+
+  .some-key {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .stat-box {
+    width: 100%;
+    height: 90px;
+    padding: 15px;
+    font-size: 17px;
+  }
+
+  .ring {
+    width: min(280px, 75vw);
+    height: min(280px, 75vw);
+    margin: 20px 0 0;
+  }
+
+  #about {
+    min-height: auto;
+    padding: 65px 6%;
+  }
+
+  #about h3 {
+    font-size: 38px;
+    margin-bottom: 35px;
+  }
+
+  .about {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .developer-box {
+    flex: none;
+    width: 100%;
+  }
+
+  .developer-photo {
+    width: min(360px, 88vw);
+    height: min(360px, 88vw);
+  }
+
+  .about-content {
+    width: 100%;
+  }
+
+  .profile {
+    font-size: 25px;
+  }
+
+  .about-description {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .some-key-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .stat-box-1 {
+    width: 100%;
+    height: auto;
+    min-height: 95px;
+  }
+
+  .about ul {
+    gap: 8px;
+  }
+
+  .about ul li {
+    font-size: 13px;
+    padding: 7px 12px;
+  }
+
+  #education {
+    padding-bottom: 60px;
+  }
+
+  #education h3 {
+    font-size: 38px;
+    padding: 60px 15px 35px;
+  }
+
+  .education-card {
+    width: 88%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .education-yr {
+    margin-left: 0;
+  }
+
+  .education-content {
+    margin-top: 25px;
+    gap: 18px;
+  }
+
+  .education-degree,
+  .education-college,
+  .education-about {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .education-about {
+    align-items: flex-start;
+  }
+
+  #skills {
+    min-height: auto;
+    padding: 1px 0 65px;
+  }
+
+  #skills h5 {
+    margin-top: 60px;
+    font-size: 15px;
+  }
+
+  #skills h3,
+  #project h3,
+  #github h3,
+  #contact h3 {
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+
+  .skill {
+    grid-template-columns: 1fr;
+    padding: 10px 6%;
+    gap: 18px;
+    margin-top: 40px;
+  }
+
+  .lang {
+    min-height: auto;
+    padding: 25px 20px;
+  }
+
+  .sign {
+    margin: 10px auto 20px;
+  }
+
+  .lang h4 {
+    font-size: 24px;
+  }
+
+  .lang li {
+    font-size: 17px;
+    margin: 15px 0;
+  }
+
+  #project {
+    min-height: auto;
+    padding-bottom: 65px;
+  }
+
+  #project h5 {
+    margin-top: 60px;
+    font-size: 18px;
+  }
+
+  .project {
+    grid-template-columns: 1fr;
+    padding: 10px 6%;
+    gap: 18px;
+    margin-top: 35px;
+  }
+
+  .project-card {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 25px;
+    gap: 15px;
+  }
+
+  .p-logo h4 {
+    margin-top: 25px;
+    font-size: 25px;
+  }
+
+  .project-card p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  #github {
+    min-height: auto;
+    padding: 65px 6%;
+  }
+
+  .github-heading {
+    padding-top: 0;
+  }
+
+  #github h5 {
+    font-size: 18px;
+  }
+
+  #github p {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .github-logo {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .s-logo {
+    margin-left: 0;
+    width: 65px;
+    height: 65px;
+    font-size: 32px;
+  }
+
+  .github-profile {
+    margin-left: 0;
+    font-size: 24px;
+  }
+
+  .github-profile-1 {
+    margin-left: 0;
+    font-size: 13px;
+  }
+
+  .github-logo-1 {
+    margin-left: auto;
+  }
+
+  #contact {
+    min-height: auto;
+    padding: 65px 6%;
+  }
+
+  .contact-heading {
+    padding-top: 0;
+  }
+
+  #contact h5 {
+    font-size: 18px;
+  }
+
+  .connect-about {
+    width: 100%;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .connect-info {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    border-radius: 30px;
+  }
+
+  .connect-info-1,
+  .connect-info-2 {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .connect-info-2 {
+    margin-top: 12px;
+  }
+
+  .connect-email,
+  .connect-linkedin,
+  .connect-location,
+  .connect-stay {
+    min-height: 145px;
+  }
+
+  .connect-name {
+    font-size: 20px;
+  }
+
+  .connect-email-link {
+    font-size: 14px;
+    overflow-wrap: anywhere;
+  }
+
+  .whatsapp {
+    width: 100%;
+    max-width: 355px;
+    font-size: 17px;
+    margin-top: 40px;
+  }
+
+  .footer {
+    min-height: auto;
+  }
+
+  .footer-contant {
+    width: 88%;
+    padding: 55px 0 30px;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .left-side,
+  .footer-middle,
+  .footer-right {
+    width: 100%;
+    max-width: none;
+  }
+
+  .footer-side {
+    margin-bottom: 30px;
+  }
+
+  .footer-social-links {
+    margin-top: 30px;
+  }
+
+  .footer-link-1 {
+    margin-left: 0;
+  }
+
+  .footer-copyright {
+    width: 88%;
+    text-align: center;
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   8. SMALL PHONE — 360px to 479px
+   ========================================================= */
+
+@media (min-width: 360px) and (max-width: 479px) {
+  .header {
+    height: 68px;
+    padding: 0 14px;
+  }
+
+  .temp {
+    margin-left: 0;
+    gap: 8px;
+  }
+
+  .header-logo {
+    padding: 7px;
+    font-size: 14px;
+    border-radius: 9px;
+  }
+
+  .header-name {
+    font-size: 16px;
+  }
+
+  .header-profile {
+    font-size: 8px;
+  }
+
+  .header-link {
+    gap: 0;
+    margin-right: 0;
+  }
+
+  .header-link a {
+    font-size: 8px;
+    padding: 6px 2px;
+  }
+
+  .header-link a:nth-child(n + 6) {
+    display: none;
+  }
+
+  .opp {
+    display: block;
+    width: fit-content;
+    max-width: 90%;
+    margin: 18px auto 0;
+    font-size: 11px;
+    padding: 7px 10px;
+    text-align: center;
+  }
+
+  #home {
+    min-height: auto;
+    padding: 35px 5% 55px;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .greeting {
+    font-size: 19px;
+  }
+
+  .intro h1 {
+    font-size: clamp(43px, 14vw, 58px);
+    line-height: 1;
+  }
+
+  .intro h2 {
+    font-size: 24px;
+    margin: 14px 0 18px;
+  }
+
+  .me {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .home-link {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .home-link a {
+    width: 100%;
+  }
+
+  .home-both-1,
+  .home-both-2 {
+    width: 100%;
+    height: 44px;
+    justify-content: center;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .social-links {
+    gap: 12px;
+    margin-top: 25px;
+    justify-content: center;
+  }
+
+  .social-links a {
+    width: 44px;
+    height: 44px;
+    font-size: 21px;
+  }
+
+  .some-key {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 25px;
+  }
+
+  .stat-box {
+    width: 100%;
+    height: 80px;
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .stat-label {
+    margin-top: 6px;
+  }
+
+  .ring {
+    width: min(250px, 72vw);
+    height: min(250px, 72vw);
+    margin: 20px 0 0;
+  }
+
+  #about {
+    min-height: auto;
+    padding: 55px 5%;
+  }
+
+  #about h3 {
+    font-size: 34px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+  }
+
+  .about {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .developer-photo {
+    width: min(320px, 88vw);
+    height: min(320px, 88vw);
+  }
+
+  .greet {
+    font-size: 14px;
+  }
+
+  .profile {
+    font-size: 22px;
+  }
+
+  .location {
+    font-size: 14px;
+  }
+
+  .about-description {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .some-key-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 25px 0;
+  }
+
+  .stat-box-1 {
+    width: 100%;
+    height: auto;
+    min-height: 85px;
+    padding: 15px 10px;
+    font-size: 15px;
+  }
+
+  .stat-label-1 {
+    font-size: 14px;
+  }
+
+  .about ul {
+    gap: 7px;
+  }
+
+  .about ul li {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  #education {
+    padding-bottom: 55px;
+  }
+
+  #education h3 {
+    font-size: 34px;
+    letter-spacing: 2px;
+    padding: 55px 10px 30px;
+  }
+
+  .education-card {
+    width: 90%;
+    height: auto;
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .education-yr {
+    width: fit-content;
+    margin-left: 0;
+    font-size: 11px;
+    padding: 7px 9px;
+  }
+
+  .education-content {
+    margin-top: 20px;
+    gap: 15px;
+  }
+
+  .education-degree,
+  .education-college,
+  .education-about {
+    font-size: 14px;
+    line-height: 1.5;
+    align-items: flex-start;
+  }
+
+  .cap,
+  .school {
+    min-width: 38px;
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+
+  #skills {
+    min-height: auto;
+    padding: 1px 0 55px;
+  }
+
+  #skills h5 {
+    margin-top: 55px;
+    font-size: 13px;
+  }
+
+  #skills h3,
+  #project h3,
+  #github h3,
+  #contact h3 {
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+
+  .skill {
+    grid-template-columns: 1fr;
+    padding: 10px 5%;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .lang {
+    min-height: auto;
+    padding: 22px 15px;
+  }
+
+  .sign {
+    width: 60px;
+    height: 60px;
+    font-size: 32px;
+    margin: 5px auto 18px;
+  }
+
+  .lang h4 {
+    font-size: 21px;
+    margin-bottom: 15px;
+  }
+
+  .lang li {
+    font-size: 15px;
+    margin: 12px 0;
+  }
+
+  #project {
+    min-height: auto;
+    padding-bottom: 55px;
+  }
+
+  #project h5 {
+    margin-top: 50px;
+    font-size: 15px;
+  }
+
+  .project {
+    grid-template-columns: 1fr;
+    padding: 10px 5%;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  .project-card {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 22px 18px;
+    gap: 14px;
+  }
+
+  .p-logo-1 {
+    width: 48px;
+    height: 48px;
+    font-size: 23px;
+  }
+
+  .p-logo h4 {
+    margin-top: 20px;
+    font-size: 22px;
+  }
+
+  .project-card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .project-card ul {
+    gap: 7px;
+  }
+
+  .project-card ul li {
+    font-size: 11px;
+    padding: 5px 9px;
+  }
+
+  .project-card a {
+    width: 130px;
+    font-size: 15px;
+  }
+
+  #github {
+    min-height: auto;
+    padding: 55px 5%;
+  }
+
+  .github-heading {
+    padding-top: 0;
+  }
+
+  #github h5 {
+    font-size: 15px;
+  }
+
+  #github p {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .github-logo {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 18px;
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+  }
+
+  .s-logo {
+    margin-left: 0;
+    width: 55px;
+    height: 55px;
+    font-size: 27px;
+  }
+
+  .github-profile {
+    margin-left: 0;
+    font-size: 20px;
+  }
+
+  .github-profile-1 {
+    margin-left: 0;
+    font-size: 11px;
+  }
+
+  .github-logo-1 {
+    grid-column: 1 / -1;
+    margin: 5px 0 0;
+  }
+
+  .github-logo-1 a {
+    width: 100%;
+  }
+
+  #contact {
+    min-height: auto;
+    padding: 55px 5%;
+  }
+
+  .contact-heading {
+    padding-top: 0;
+  }
+
+  #contact h5 {
+    font-size: 15px;
+  }
+
+  .connect-about {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.65;
+    margin-bottom: 30px;
+  }
+
+  .connect-info {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    border-radius: 25px;
+  }
+
+  .connect-info-1,
+  .connect-info-2 {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .connect-info-2 {
+    margin-top: 10px;
+  }
+
+  .connect-email,
+  .connect-linkedin,
+  .connect-location,
+  .connect-stay {
+    min-height: 130px;
+    padding: 15px;
+  }
+
+  .connect-logo {
+    width: 55px;
+    height: 55px;
+    font-size: 23px;
+    margin-bottom: 12px;
+  }
+
+  .connect-name {
+    font-size: 18px;
+  }
+
+  .connect-email-link,
+  .connect-location-1,
+  .connect-stay-name-1,
+  .connect-linkedin a {
+    font-size: 13px;
+  }
+
+  .whatsapp {
+    width: 100%;
+    height: 42px;
+    font-size: 14px;
+    gap: 10px;
+    margin-top: 30px;
+  }
+
+  .footer {
+    min-height: auto;
+  }
+
+  .footer-contant {
+    width: 90%;
+    padding: 45px 0 25px;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .left-side,
+  .footer-middle,
+  .footer-right {
+    width: 100%;
+    max-width: none;
+  }
+
+  .footer-side {
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+
+  .footer-logo {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .footer-name {
+    font-size: 25px;
+  }
+
+  .footer-profile {
+    font-size: 13px;
+  }
+
+  .footer-about {
+    font-size: 14px;
+  }
+
+  .footer-social-links {
+    margin-top: 25px;
+    gap: 15px;
+  }
+
+  .footer-social-links a {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+  }
+
+  .nav,
+  .footer-right-title {
+    font-size: 20px;
+  }
+
+  .footer-link-1 {
+    margin-left: 0;
+    gap: 15px;
+    font-size: 15px;
+  }
+
+  .footer-right-text {
+    font-size: 14px;
+  }
+
+  .footer-status {
+    font-size: 14px;
+    margin-top: 25px;
+  }
+
+  .footer-copyright {
+    width: 90%;
+    font-size: 11px;
+    text-align: center;
+  }
+}
+
+/* =========================================================
+   9. VERY SMALL PHONE — BELOW 360px
+   ========================================================= */
+
+@media (max-width: 359px) {
+  .header {
+    height: 64px;
+    padding: 0 10px;
+  }
+
+  .temp {
+    margin-left: 0;
+    gap: 7px;
+  }
+
+  .header-logo {
+    padding: 6px;
+    font-size: 13px;
+  }
+
+  .header-name {
+    font-size: 14px;
+  }
+
+  .header-profile {
+    font-size: 7px;
+  }
+
+  .header-link {
+    margin-right: 0;
+    gap: 0;
+  }
+
+  .header-link a {
+    font-size: 7px;
+    padding: 5px 2px;
+  }
+
+  .header-link a:nth-child(n + 5) {
+    display: none;
+  }
+
+  .opp {
+    width: 92%;
+    margin: 15px auto 0;
+    font-size: 10px;
+    padding: 7px 8px;
+    text-align: center;
+  }
+
+  #home {
+    padding: 30px 4% 45px;
+  }
+
+  .greeting {
+    font-size: 17px;
+  }
+
+  .intro h1 {
+    font-size: 40px;
+  }
+
+  .intro h2 {
+    font-size: 21px;
+  }
+
+  .me {
+    font-size: 13px;
+  }
+
+  .home-both-1,
+  .home-both-2 {
+    font-size: 13px;
+  }
+
+  .social-links a {
+    width: 40px;
+    height: 40px;
+    font-size: 19px;
+  }
+
+  .stat-box {
+    height: 75px;
+    font-size: 14px;
+  }
+
+  .ring {
+    width: 220px;
+    height: 220px;
+  }
+
+  #about,
+  #education,
+  #skills,
+  #project,
+  #github,
+  #contact {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  #about h3,
+  #education h3,
+  #skills h3,
+  #project h3,
+  #github h3,
+  #contact h3 {
+    font-size: 29px;
+    letter-spacing: 1px;
+  }
+
+  .developer-photo {
+    width: 85vw;
+    height: 85vw;
+  }
+
+  .profile {
+    font-size: 20px;
+  }
+
+  .about-description,
+  .education-about {
+    font-size: 13px;
+  }
+
+  .skill,
+  .project {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .lang {
+    padding: 20px 12px;
+  }
+
+  .lang h4 {
+    font-size: 19px;
+  }
+
+  .lang li {
+    font-size: 14px;
+  }
+
+  .project-card {
+    padding: 20px 15px;
+  }
+
+  .project-card p {
+    font-size: 13px;
+  }
+
+  #github p,
+  .connect-about {
+    font-size: 13px;
+  }
+
+  .connect-info {
+    padding: 12px;
+  }
+
+  .whatsapp {
+    font-size: 13px;
+  }
+
+  .footer-name {
+    font-size: 22px;
+  }
+
+  .footer-about,
+  .footer-right-text {
+    font-size: 13px;
+  }
+}
+
+/* =========================================================
+   10. GENERAL MOBILE SAFETY
+   ========================================================= */
+
+@media (max-width: 767px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .main,
+  .header,
+  .footer {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #home,
+  #about,
+  #education,
+  #skills,
+  #project,
+  #github,
+  #contact {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .intro,
+  .about-content,
+  .project-card,
+  .lang,
+  .education-card,
+  .connect-info,
+  .github-logo {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  p,
+  li,
+  a,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    overflow-wrap: anywhere;
+  }
+
+  /* Remove excessive desktop spacing */
+  #skills h5,
+  #project h5 {
+    margin-top: 50px;
+  }
+
+  /* Prevent fixed desktop sizes from causing overflow */
+  .education-card,
+  .github-logo,
+  .connect-info,
+  .project-card,
+  .stat-box,
+  .stat-box-1 {
+    box-sizing: border-box;
+  }
+
+  /* Mobile project cards always vertical */
+  .project {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Mobile skills always vertical */
+  .skill {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Contact cards always vertical */
+  .connect-info-1,
+  .connect-info-2 {
+    flex-direction: column;
+  }
+
+  /* Footer always vertical */
+  .footer-contant {
+    flex-direction: column;
+  }
+
+  .left-side,
+  .footer-middle,
+  .footer-right {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   11. LANDSCAPE PHONES
+   ========================================================= */
+
+@media (max-width: 767px) and (orientation: landscape) {
+  #home {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
+
+  .ring {
+    width: 220px;
+    height: 220px;
+    margin-top: 10px;
+  }
+
+  #about,
+  #education,
+  #skills,
+  #project,
+  #github,
+  #contact {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+/* =========================================================
+   12. ACCESSIBILITY / REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
