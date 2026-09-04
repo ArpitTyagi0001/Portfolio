@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./App.css";
 import photo from "./assets/photo.png";
 import developer from "./assets/developer.png";
@@ -34,6 +35,8 @@ function App() {
             <div className="header-profile">JAVA DEVELOPER</div>
           </div>
         </div>
+
+        {/* Desktop Navigation */}
         <nav className="header-link">
           <a href="#home">Home</a>
           <a href="#about">About</a>
@@ -41,9 +44,11 @@ function App() {
           <a href="#education">Education</a>
           <a href="#project">Projects</a>
           <a href="#github">GitHub</a>
+
           <a href="#contact" className="contact">
             Contact
           </a>
+
           <a
             href="https://drive.google.com/file/d/1MY0lbLKFHBJHDKX5iJdyZV_Ib3zrsED8/view"
             target="_blank"
@@ -53,11 +58,67 @@ function App() {
             <div className="both">
               <div>
                 <FaDownload />
-              </div>{" "}
+              </div>
               Resume
             </div>
           </a>
         </nav>
+
+        {/* Mobile 3-dot button */}
+        <button
+          className="mobile-menu-btn"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Open navigation menu"
+          aria-expanded={menuOpen}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        {/* Mobile Navigation */}
+        {menuOpen && (
+          <nav className="mobile-nav">
+            <a href="#home" onClick={() => setMenuOpen(false)}>
+              Home
+            </a>
+
+            <a href="#about" onClick={() => setMenuOpen(false)}>
+              About
+            </a>
+
+            <a href="#skills" onClick={() => setMenuOpen(false)}>
+              Skills
+            </a>
+
+            <a href="#education" onClick={() => setMenuOpen(false)}>
+              Education
+            </a>
+
+            <a href="#project" onClick={() => setMenuOpen(false)}>
+              Projects
+            </a>
+
+            <a href="#github" onClick={() => setMenuOpen(false)}>
+              GitHub
+            </a>
+
+            <a href="#contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </a>
+
+            <a
+              href="https://drive.google.com/file/d/1MY0lbLKFHBJHDKX5iJdyZV_Ib3zrsED8/view"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mobile-resume"
+              onClick={() => setMenuOpen(false)}
+            >
+              <FaDownload />
+              &nbsp; Resume
+            </a>
+          </nav>
+        )}
       </header>
       <main className="main">
         <p className="opp">

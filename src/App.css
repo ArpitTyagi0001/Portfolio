@@ -3734,3 +3734,178 @@ html {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* =========================================================
+   MOBILE 3-DOT MENU
+   ========================================================= */
+
+.mobile-menu-btn {
+  display: none;
+}
+
+/* =========================================================
+   FIX WHITE SPACE BETWEEN HEADER AND HOME
+   ========================================================= */
+
+/* Desktop */
+.header {
+  margin-bottom: 0 !important;
+}
+
+#home {
+  margin-top: 0 !important;
+}
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+@media (max-width: 767px) {
+  /* Header must stay directly above Home */
+  .header {
+    position: relative;
+    height: 68px !important;
+    min-height: 68px !important;
+    margin: 0 !important;
+    padding: 0 14px !important;
+    box-sizing: border-box;
+    z-index: 9999;
+  }
+
+  /* Remove any spacing created by first section */
+  #home {
+    margin-top: 0 !important;
+    padding-top: 35px !important;
+  }
+
+  /* Hide desktop navigation */
+  .header-link {
+    display: none !important;
+  }
+
+  /* Mobile 3-dot button */
+  .mobile-menu-btn {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    margin-left: auto;
+    padding: 0;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    z-index: 10001;
+  }
+
+  .mobile-menu-btn span {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: block;
+  }
+
+  /* =======================================================
+     MOBILE DROPDOWN
+     ======================================================= */
+
+  .mobile-nav {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 12px;
+
+    width: min(240px, calc(100vw - 24px));
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 12px;
+
+    background: rgba(13, 15, 45, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+
+    z-index: 10000;
+  }
+
+  .mobile-nav a {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-height: 44px;
+
+    padding: 10px 14px;
+
+    box-sizing: border-box;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    border-radius: 10px;
+
+    transition:
+      background 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .mobile-nav a:hover,
+  .mobile-nav a:active {
+    background: rgba(130, 80, 255, 0.18);
+    color: #b794ff;
+  }
+
+  .mobile-nav .mobile-resume {
+    justify-content: center;
+    margin-top: 8px;
+
+    background: linear-gradient(135deg, #7c3aed, #4f46e5);
+
+    color: white;
+  }
+
+  .mobile-nav .mobile-resume:hover {
+    color: white;
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+  }
+}
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 359px) {
+  .header {
+    height: 64px !important;
+    min-height: 64px !important;
+    padding: 0 10px !important;
+  }
+
+  #home {
+    padding-top: 30px !important;
+  }
+
+  .mobile-menu-btn {
+    width: 38px;
+    height: 38px;
+  }
+
+  .mobile-nav {
+    right: 8px;
+    width: min(220px, calc(100vw - 16px));
+  }
+
+  .mobile-nav a {
+    font-size: 14px;
+    min-height: 42px;
+  }
+}
