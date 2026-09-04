@@ -64,8 +64,6 @@ function App() {
             </div>
           </a>
         </nav>
-
-        {/* Mobile 3-dot button */}
         <button
           className="mobile-menu-btn"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -77,7 +75,6 @@ function App() {
           <span></span>
         </button>
 
-        {/* Mobile Navigation */}
         {menuOpen && (
           <nav className="mobile-nav">
             <a href="#home" onClick={() => setMenuOpen(false)}>
