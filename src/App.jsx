@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import photo from "./assets/photo.png";
 import developer from "./assets/developer.png";
@@ -24,6 +24,7 @@ import {
 import { SiLeetcode } from "react-icons/si";
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <>
       <header className="header">
